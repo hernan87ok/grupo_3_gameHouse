@@ -20,6 +20,6 @@ Todo el público del ambiente del gaming, ya se profesional o no, es nuestro tar
                       
 * http://planetagames.com.ar -> Sitio nacional, con oferta similar a la de nuestro proyecto
                       
-* http://eneba.com -> Si bien éste sitio ofrece juegos de tipo digitales, su oferta nos pareció interesante tomar de referencia
+* http://eneba.com -> Si bien éste sitio ofrece juegos de tipo digitales, su oferta nos pareció interesante para tomar de referencia
 
-* http://gamersforever.com.ar -> Otro sitio nacional cuya oferta nos pareció interesante, dado que, además de ofrecer jeugos nuevos, también participa del mercado de juegos usados
+* http://gamersforever.com.ar -> Otro sitio nacional cuya oferta nos pareció interesante, dado que, además de ofrecer juegos nuevos, también participa del mercado de juegos usados
