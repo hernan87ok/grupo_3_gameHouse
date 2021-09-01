@@ -23,3 +23,10 @@ Todo el público del ambiente del gaming, ya se profesional o no, es nuestro tar
 * http://eneba.com -> Si bien éste sitio ofrece juegos de tipo digitales, su oferta nos pareció interesante para tomar de referencia
 
 * http://gamersforever.com.ar -> Otro sitio nacional cuya oferta nos pareció interesante, dado que, además de ofrecer juegos nuevos, también participa del mercado de juegos usados
+
+## Integrantes del Equipo
+
+* Cordary, Hernan 
+* Davico, Ariel 
+* Morales, Federico
+* Speroni, Lucas
