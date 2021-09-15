@@ -1,0 +1,19 @@
+{
+  "name": "grupo_3_gamerhouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hernan87ok/grupo_3_gamerHouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hernan87ok/grupo_3_gamerHouse/issues"
+  },
+  "homepage": "https://github.com/hernan87ok/grupo_3_gamerHouse#readme"
+}
