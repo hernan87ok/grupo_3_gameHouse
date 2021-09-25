@@ -30,3 +30,7 @@ Todo el público del ambiente del gaming, ya se profesional o no, es nuestro tar
 * Davico, Ariel 
 * Morales, Federico
 * Speroni, Lucas
+
+## Tablero de control
+
+Para llevar un adecuado y ágil control del proyecto, utilizamos la herramienta Trello. Se trata de un tablero público al que cualquier usuario puede unirse utilizando el link https://trello.com/invite/b/QzbMQqLF/3711632e5fd860011c90d021650b7458/gamehouse .
