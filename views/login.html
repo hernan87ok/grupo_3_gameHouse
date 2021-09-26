@@ -1,12 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+    
+        <!-- Importo fonts  -->
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+       <!-- ------ -->
+    
+       <!-- font-family: 'Lato', sans-serif; -->
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link type="text/css" rel="stylesheet" href="css/styles-home.css">
+        <link type="text/css" rel="stylesheet" href="css/styles-login.css">
+        <link type="text/css" rel="stylesheet" href="css/normalize.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gamerhouse</title>
+    
+    </head>
+
 <body>
     
+
+ <header class = "main-header">
+
+
+    <nav class="main-navbar">
+
+        <ul class="left-navbar">
+            <li class="burger-menu"><a href=""><i class="fas fa-bars"></i></a></li>
+            <div class="div-logo">
+                <i><img src="img/logo.png" alt="welcome home gamers ;-)" class="responsive-logo"></i>
+                </div>
+
+        </ul>
+
+        <ul class ="center-navbar">
+        <li><input class="input-nav" placeholder="Buscá tu producto...">  <i class="fas fa-search"></i></li>
+        </ul>
+
+        <ul class="right-navbar">
+
+            <li><a href="/login"><i class="far fa-user-circle"></i></a></li>
+            <li><a href="/productCart"><i class="fas fa-shopping-basket"></i></a></li>
+ 
+        </ul>
+    </nav>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+    <main>
+
+        <h3>Ingresá a tu cuenta</h3>
+
+        <form class="form-login" action="/" method="POST"> 
+
+            <div class="div-input">
+                <label for="user">
+                 <input type="text" pattern=".{3,100}" placeholder="Usuario" name="user" id="user">
+                </label>
+            </div>
+        
+                <div class="div-input">
+                <label for="password">
+                    <input type="text" placeholder="Password" name="password" id="password">
+                </label>
+            </div>    
+            
+            <div class="div-recordar-password">
+
+                <h4> Recordar contraseña </h4><input type="checkbox" name="recordar-password" name="recordar-password" id="recordar-password" >
+
+
+
+            </div>
+
+
+            <div class=div-boton>
+                <label for="boton-enviar">
+                    
+                    <button class="boton-ingresar" type="submit">Ingresar</button>
+    
+                </label>
+            </div>
+        
+        </form>
+
+        <h4><a href="/">Olvidé mi contraseña</h4></a>
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <footer class="main-footer">
+
+
+        <div class="div-footer">
+    
+    
+            <ul class="left-footer">
+    
+                <li><h4>Seguinos!</h4></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+    
+            </ul>
+    
+            <ul class="center-footer">
+    
+                <li><h4>Contactanos</h4></li>
+                <li><i class="fas fa-phone"></i></li>
+                <li><i class="far fa-envelope"></i></li>
+                
+    
+            </ul>
+    
+            <ul class="right-footer">
+                <li><h4>Newsletter</h4></li>
+                <li><i class="fas fa-rss-square"></i></a></li>
+     
+            </ul>
+        </div>
+    
+    
+    
+        </footer>
+
 </body>
+
+
 </html>

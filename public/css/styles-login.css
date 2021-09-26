@@ -1,0 +1,39 @@
+body h3 {
+
+    text-align: center;
+}
+
+main {
+
+    text-align: center;
+    min-height: 500px;
+    position: relative;
+    margin-top: auto;
+    
+}
+
+body h4 {
+    font-size: 12px;
+   
+    margin: 0;
+
+    margin-right: 5px;
+
+}
+
+.div-recordar-password {
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.div-boton {
+
+    padding: 20px;
+}
+
+.div-input {
+    padding: 10px;
+}
