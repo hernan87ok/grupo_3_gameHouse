@@ -1,0 +1,41 @@
+.portada {
+    width: auto;
+    background-color: rgb(202, 202, 202);
+    margin: 2%;
+    padding: 2%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+img.portada-b {
+    
+}
+
+.portada-b {
+    width: 40%;
+    border-radius: 20px;
+}
+
+.carrito {
+    display: inline-block;
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    background-color:rgb(52, 107, 52);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titular {
+    text-align: left;
+    margin-left: 5%;
+}
+
+main {
+    text-align: center;
+}
+
+.xbox {
+    width: 30%;
+    text-align: start;
+}
