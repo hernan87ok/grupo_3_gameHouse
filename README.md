@@ -26,10 +26,10 @@ Todo el público del ambiente del gaming, ya se profesional o no, es nuestro tar
 
 ## Integrantes del Equipo
 
-* Cordary, Hernan 
-* Davico, Ariel 
-* Morales, Federico
-* Speroni, Lucas
+* Cordary, Hernan - Licenciado en Informática (UADE), Oficial de Seguridad Informática Sr.
+* Davico, Ariel - Maestro Mayor de obras
+* Morales, Federico - Instalador de sistemas de seguridad
+* Speroni, Lucas - Asesor tributario
 
 ## Tablero de control
 
