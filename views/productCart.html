@@ -16,11 +16,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link type="text/css" rel="stylesheet" href="css/styles-home.css">
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/styles-productCart.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamerhouse</title>
 
 </head>
+
 
 
 
@@ -57,16 +59,76 @@
 
 
 
+    <section>
+
+        <h2>MI COMPRA</h2>
         
+        <h3>MI CARRITO</h3>
+
+        <p><input type="text" id="nombre" name="nombre" value="Nombre del Prodducto" readonly></p>
+
+        <p><input type="text" id="valor" name="total" value="Total: $----" readonly></p>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Cantidad</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+
+          
+
+        <h3>DATOS ENVIO</h3>
+        <form>
+            <div class="form-group">
+              
+              <p><input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Nombre y Apellido"></p>
+              <p></p><input type="name" class="form-control" id="exampleFormControlInput1" placeholder="DNI"></p>
+              <p></p><input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Telefono de Contacto"></p>
+              <p></p><input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Direccion"></p>
+              <p></p><input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Localidad"></p>
+              <p></p><input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Codigo Postal"></p>
+
+            </div>
+        </form>
+
+        <h3>PAGO</h3>
+        
+        <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Metodo de Pago</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Seleccione...</option>
+                  <option value="1">MercadoPago</option>
+                  <option value="2">Tarjeta de Credito/Debito</option>
+                  <option value="3">Rapipago/PagoFacil</option>
+                </select>
+              </div>
+        </form>      
+
+        <p><button type="button" class="btn btn-primary btn-lg btn-block">CONFIRMAR</button></p>
+
+    </section>
+
 
 
 
 
     </main>
-    <footer class="main-footer">
+    <p><footer class="main-footer">
 
 
-        <div class="div-footer">
+       <div class="div-footer">
     
     
             <ul class="left-footer">
@@ -96,7 +158,7 @@
     
     
     
-        </footer>
+        </footer></p>
     
     
     
@@ -107,5 +169,3 @@
     
     
     </html>
-</body>
-</html>
