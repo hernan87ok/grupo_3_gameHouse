@@ -35,7 +35,53 @@ main {
     text-align: center;
 }
 
-.xbox {
-    width: 30%;
-    text-align: start;
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
 }
+
+.box-izq {
+    vertical-align: middle;
+    display: table-cell;
+    text-align: left;
+    white-space: normal;
+    background-color: bisque;
+
+}
+
+.standard-table {
+    border: 1px solid #a4a4a4; 
+    font-size: .9rem;
+    overflow-x: auto;
+    width: 100%;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+table td:first-child, table th:first-child {
+    border-left: 0;
+    width: 30%;
+}
+table td, table th {
+    border-left: 1px solid black;
+    padding: 14px;
+    text-align: left;
+}
+table td, table th {
+    border: 0;
+    border-bottom: 1px solid #a4a4a4;
+}
+table th {
+    background-color: #d5d5d5;
+}
+
