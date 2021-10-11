@@ -48,7 +48,7 @@
   //     },
   // };
 
-  const usersController;
+  const usersController = null;
 
   
   

@@ -50,7 +50,7 @@
 
 
   
-  const productsController;
+  const productsController = null;
 
-  
+
   module.exports = productsController;
