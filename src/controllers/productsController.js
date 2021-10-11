@@ -50,7 +50,18 @@
 
 
   
-  const productsController = null;
+  const productsController = {
+
+    detail: (req,res) => {
+      //Acá habrá que agarrar el ID que se pasará como parámetro, ver ejemplo arriba 
+      res.render('./products/detail.ejs');
+    },
+
+    cart: (req,res) => {
+      res.render('./products/cart.ejs');
+    }
+
+  }
 
 
   module.exports = productsController;
