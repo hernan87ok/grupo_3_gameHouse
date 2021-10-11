@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs') %> 
+
+    <body>
+    
+    <%- include('../partials/header.ejs') %> 
+
+
+
+    <main>
+
+        <h3>Formulario de registro</h3>
+
+        <form class="form-login" action="/" method="POST"> 
+
+            <h4>Datos de la cuenta</h4>
+       
+            <form class="form-registro" action="/" method="POST">
+    
+            <div class="div-input">
+            <label for="nomape">
+             <input type="text" required pattern=".{3,100}" placeholder="Nombre y apellido" name="nomape" id="nomape">
+            </label>
+        </div>
+    
+            <div class="div-input">
+            <label for="username">
+                <input type="text" required pattern=".{3,100}" placeholder="Nombre de usuario" name="username" id="username">
+            </label>
+            </div>    
+    
+            <div class="div-input">
+            <label for="email">
+            <input type="email" required placeholder="e-mail" name="email" id="email">
+            </label>
+            </div>
+    
+            <h4>Fecha de nacimiento</h4>
+            
+            <div class="div-input">
+                <label for="fechanac">
+                 <input type="date"  required name="nomape" id="nomape">
+                </label>
+            </div>
+    
+            <h4>Domicilio</h4>
+            
+            <div class="div-input">
+                <label for="calle">
+                 <input type="text"  placeholder="Calle" required name="calle" id="calle">
+                </label>
+            </div>
+
+            <div class="div-input">
+                <label for="altura">
+                 <input type="text"   placeholder="Altura" required name="altura" id="altura">
+                </label>
+            </div>
+
+            <div class="div-input">
+                <label for="piso">
+                 <input type="text"   placeholder="Piso" required name="piso" id="piso">
+                </label>
+            </div>
+
+            <div class="div-input">
+                <label for="depto">
+                 <input type="text"   placeholder="Departamento" required name="depto" id="depto">
+                </label>
+            </div>
+
+
+            <div class="div-input">
+                <label for="codpost">
+                 <input type="text"  placeholder="Código postal" required name="codpos" id="codpos">
+                </label>
+            </div>
+    
+            <h4>Contraseña</h4>
+    
+            <div class=div-input>
+                <label for="password">
+                    <input type="password"  name="pasword" id="password" placeholder="Contraseña">
+                </label>
+            </div>
+    
+            <div class=div-input>
+                <label for="confirma-password">
+                    <input type="password"  name="confirma-pasword" id="confirma-password" placeholder="Confirmar contraseña">
+                </label>
+            </div>
+    
+            <div class="div-botones">
+           
+                <div class=div-input>
+                <label for="boton-enviar">
+                    
+                    <button type="submit">Registrarme</button>
+    
+                </label>
+            </div>
+    
+            <div class=div-input>
+                <label for="boton-reset">
+                    <button type="reset">Restablecer</button>
+                </label>
+            </div>
+    
+    
+         </div>
+    
+    
+        </form>
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %> 
+
+</body>
+
+
+</html>
