@@ -7,6 +7,7 @@
 .responsive {
     width: 100%;
     height: auto;
+    border-radius: 10px;
   }
 
 .input-nav {
@@ -77,7 +78,6 @@
     background-color: #E05D5D;
     border: solid #E05D5D;
     margin: 0%;
-    padding: 10px;
     padding-bottom: 0px;
     box-sizing: border-box;
     padding-left: 5px;
@@ -209,33 +209,21 @@ article {
 
     .div-imagenes-marcas {
 
-        display:flex;
-        flex-direction: column;
-        
         margin: auto;
-        width: 70%;
 
     }
 
     .div-imagenes-marcas ul {
-
-        text-align: center;
         list-style-type: none;
         padding: 0;
-      
+        display: flex;
         
     }
 
     .div-imagenes-marcas li {
-        padding:10px;
-        
+        border-radius: 10px;  
     }
 
-    .div-imagenes-marcas li img {
-        
-        max-width: 300px;
-        
-    }
 
     .pagos-envios {
 
@@ -245,7 +233,6 @@ article {
     }
 
     .div-envios{
-
         padding: 10px;
         margin-top: 30px;
         text-align: center;
@@ -261,21 +248,14 @@ article {
     .div-envios div {
 
         color:brown;
-        font-size: 30px;
+        font-size: 20px;
         border: 3px solid brown;
         border-radius: 50%;
-        /* display: block; */
-        /* position:absolute; */
         padding: 5px;
         width: 40px;
         height: 40px;
         background-color: white ;
-        /* right:5px; */
         text-align: center;
-        /* margin-right: 10px; */
-        /* margin-bottom: 50px; */
-        /* margin-top: -30px; */
-
     }
 
     .div-envios h3 {
@@ -327,7 +307,24 @@ article {
         font-size: 20px;
     }
 
+.left-footer {
+    display: flex;
+    flex-direction: row;
+}
 
+.center-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.brands {
+    width: 100%;
+}
 
 
 body {

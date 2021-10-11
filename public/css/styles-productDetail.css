@@ -16,16 +16,6 @@ img.portada-b {
     border-radius: 20px;
 }
 
-.carrito {
-    display: inline-block;
-    width: 70%;
-    height: 40px;
-    border-radius: 20px;
-    background-color:rgb(52, 107, 52);
-    text-align: center;
-    margin-bottom: 25px;
-}
-
 .titular {
     text-align: left;
     margin-left: 5%;
