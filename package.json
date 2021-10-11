@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hernan87ok/grupo_3_gamerHouse#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "js": "^0.1.0"
   }
 }
