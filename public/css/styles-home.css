@@ -166,13 +166,14 @@ margin:0;
 
 article {
 
-    border: 2px solid #c5c6c8;
-    background-color: white;
+    border: 3px solid #d3d3d3;
+    background-color: #e0e0e0;
     border-radius: 15px;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-inline: 10px;
+    border-radius: 15px;
 
 }
 
@@ -293,8 +294,8 @@ article {
 
     .main-footer {
 
-        background-color: #ffda9e;
-        border: solid #ffda9e;
+        background-color: #fdf9c4;
+        border: solid #fdf9c4;
         padding-right: 5%;
         padding-left: 5%;
         box-sizing: border-box;
@@ -364,7 +365,7 @@ body {
     margin:auto;
     margin-top: 0;
     padding-top: 0;
-    background-color: #fdf9c4;
+    background-color: #ededed;
     box-sizing: border-box;
     color: #222A2C;
 
