@@ -16,6 +16,18 @@
     border-radius: 5px;
 }
 
+.lupita {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: auto;
+    display: flex;
+}
+
+.fa-search:before {
+    content: "\f002";
+    color: cadetblue;
+}
 
 
 .main-navbar {
@@ -26,8 +38,7 @@
 }
 
 .burger-menu {
-    margin-top: 13%;
-    margin-right: 5%;
+    margin-top: 18%;
 }
 
 .right-navbar {
@@ -40,7 +51,7 @@
 }
 
 .carrito {
-    color: green;
+    color: #77dd77;
 }
 
 .center-navbar {
@@ -75,20 +86,13 @@
 
 .main-header {
 
-    background-color: #E05D5D;
+    background-color: #ff6961;
     border: solid #E05D5D;
     margin: 0%;
     padding-bottom: 0px;
     box-sizing: border-box;
     padding-left: 5px;
     padding-right: 5px;
-}
-
-.lupita {
-    border-radius: 5px;
-    width: 30px;
-    height: auto;
-    display: flex;
 }
 
 
@@ -136,7 +140,7 @@ margin:0;
     height: auto;
     margin-left: 5%;
     margin-right: 5%;
-    
+
     }
 
 
@@ -147,17 +151,19 @@ margin:0;
     display:flex;
     justify-content: space-between;
     padding-inline: 20px; 
-    border: 2px solid #2c2c2c;
-    border-radius: 10px;
+    border: 2px solid #fdcae1;
+    border-radius: 15px;
     background-color: #ECF0F1;
+    padding-left: 20%;
+    padding-right: 20%;
  
 }
 
 article {
 
     border: 2px solid white;
-    background-color: white;
-    border-radius: 5%;
+    background-color: #84b6f4;
+    border-radius: 15px;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -187,7 +193,7 @@ article {
     }
 
     .precio {
-        color: gray;
+        color: #9b9b9b;
     }
 
     .precio-carrito {
@@ -201,6 +207,7 @@ article {
     .section-destacados h2 {
         font-size: 20px;
         font-weight: 800;
+        color: #888a8a;
     }
 
     .section-marcas h2 {
@@ -216,6 +223,7 @@ article {
     }
 
     .div-imagenes-marcas ul {
+        justify-content: space-around;
         list-style-type: none;
         padding: 0;
         display: flex;
@@ -247,11 +255,23 @@ article {
         padding: 10px;
       }
 
+    h3.envios {
+        font-size: 12px;
+        color:#9b9b9b;
+    }
+    h3.locales {
+        font-size: 12px;
+        color:#9b9b9b;
+    }
+    h2.marcas{
+        font-size: 16px;
+        color: #a2a0a1;
+    }
     .div-envios div {
 
-        color:brown;
+        color:#84b6f4;
         font-size: 20px;
-        border: 3px solid brown;
+        border: 3px solid #84b6f4;
         border-radius: 50%;
         padding: 5px;
         width: 40px;
@@ -268,11 +288,10 @@ article {
 
     .main-footer {
 
-        background-color: #E05D5D;
+        background-color: #ff6961;
         border: solid #E05D5D;
-        margin: 0%;
-        padding: 10px;
-        padding-bottom: 0px;
+        padding-right: 5%;
+        padding-left: 5%;
         box-sizing: border-box;
     
     }
@@ -290,7 +309,6 @@ article {
         text-align: center;
         text-decoration: none;
         list-style: none;
-        margin: 0%;
         padding: 0;
 
     }
@@ -317,6 +335,7 @@ article {
 .center-footer {
     display: flex;
     flex-direction: row;
+    margin-left: -16%;
 }
 
 .right-footer {
@@ -326,6 +345,7 @@ article {
 
 .brands {
     width: 100%;
+    border-radius: 20px;
 }
 
 
