@@ -1,0 +1,27 @@
+.formulario {
+    font-size: 20px;
+    font-weight: 800;
+    color: #888a8a;
+}
+
+.datos {
+    font-size: 18px;
+    color: #a2a0a1;
+}
+
+button, input, optgroup, select, textarea {    
+    border-radius: 8px;
+    width: 75%;
+    border: 3px solid #d3d3d3;
+}
+
+.datos2 {
+    font-size: 16px;
+    color: #a2a0a1;
+}
+
+.regres {
+    font-size: 18px;
+    color: #888a8a;
+    font-weight: 800;
+}
