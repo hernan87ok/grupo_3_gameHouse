@@ -12,6 +12,7 @@ main {
     
 }
 
+
 body h4 {
     font-size: 12px;
    
@@ -30,10 +31,11 @@ body h4 {
 }
 
 .div-boton {
-
-    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .div-input {
-    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
