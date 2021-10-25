@@ -4,9 +4,9 @@ const mainController = require('../controllers/mainController');
 const productsController = require('../controllers/productsController');
 
 
-router.get('/', mainController.index);
+router.get('/', mainController.home);
 
-
+router.get('/main/index/', mainController.index);
 
 
 

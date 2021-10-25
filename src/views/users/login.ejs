@@ -10,15 +10,17 @@
 
 
 
-    <main>
+    <main class="fixed">
 
-        <h3>Ingresá a tu cuenta</h3>
+    <div class="containerreg">
+
+        <h3 class="formulario">Ingresá a tu cuenta</h3>
 
         <form class="form-login" action="/" method="POST"> 
 
             <div class="div-input">
                 <label for="user">
-                 <input type="text" pattern=".{3,100}" placeholder="Usuario" name="user" id="user">
+                 <input type="text" pattern=".{3,100}" placeholder="Usuario" name="user" id="username">
                 </label>
             </div>
         
@@ -30,17 +32,17 @@
             
             <div class="div-recordar-password">
 
-                <h4> Recordar contraseña </h4><input type="checkbox" name="recordar-password" name="recordar-password" id="recordar-password" >
+                <h4 class="datos2">Recordar contraseña</h4><input type="checkbox" name="recordar-password" name="recordar-password" id="recordar-password" >
 
 
 
             </div>
 
 
-            <div class=div-boton>
+            <div class="div-boton">
                 <label for="boton-enviar">
                     
-                    <button class="boton-ingresar" type="submit">Ingresar</button>
+                    <button class="regres" type="submit">Ingresar</button>
     
                 </label>
             </div>
@@ -50,6 +52,8 @@
         <h4><a href="/">Olvidé mi contraseña</h4></a>
             <br>
         <h4><a href="/register">No tenés cuenta? Registrate!</h4></a>
+    
+    </div>
 
     </main>
 

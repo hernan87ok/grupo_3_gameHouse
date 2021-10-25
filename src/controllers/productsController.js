@@ -1,67 +1,56 @@
+const fs = require('fs');
+const path = require('path');
 
-// let platos = [
-//     {
-//     id: 1,
-//     nombre: 'Carpaccio fresco',
-//     descripcion: 'Entrada Carpaccio de salmón con cítricos',
-//     precio: 'U$S 65.50',
-//     },
-//     {
-//     id:2,
-//     nombre: 'Risotto de berenjena',
-//     descripcion: 'Risotto de berenjena y queso de cabra ',
-//     precio: 'U$S 47.00',
-//     },
-//     {
-//     id:3,
-//     nombre: 'Mousse de arroz',
-//     descripcion: 'Mousse de arroz con leche y aroma de azahar ',
-//     precio: 'U$S 27.50',
-//     },
-//     {
-//     id:4,
-//     nombre: 'Espárragos blancos',
-//     descripcion: 'Espárragos blancos con vinagreta de verduras y jamón ibérico',
-//     precio: 'U$S 37.50',
-//     }];
-  
-  
-  
-  
-  
-  // const detalleController = {
-  
-  
-  //     detalle: (req, res) => {
-        
-  //       let idPlato = req.params.id;
-  //       let plato = null;
+/* En la constante "products" ya tienen los productos que están 
+guardados en la carpeta Data como Json (un array de objetos literales) */
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-  //       platos.forEach(function (elemento) {
+/* La constante "toThousand" deben enviarla como parametro en el res.render,
+les ayudará para mostrar el precio final adecuadamente con 
+una cantidad de decimales fija. Es una función, solamente deben poner
+como parámetro el precio final (en el archivo ejs): toThousand(finalPrice)*/
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-  //           if(elemento.id == idPlato)
-  //               plato = elemento;
+const productsController = {
 
-  //       })
-
-  //       res.render('detalleMenu.ejs', {plato} );
-  //     },
-  // };
-
-
-  
-  const productsController = {
-
-    detail: (req,res) => {
-      //Acá habrá que agarrar el ID que se pasará como parámetro, ver ejemplo arriba 
-      res.render('./products/detail.ejs');
+  detail: (req, res) => {
+      const id = req.params.id;
+      const product = products.find(product => {
+        return product.id == id
+      })
+      res.render('./products/detail', {
+        productSent: product
+      })
     },
 
-    cart: (req,res) => {
-      res.render('./products/cart.ejs');
-    }
+  cart: (req, res) => {
+      res.render('./products/cart')
+    },
+
+  create: (req, res) => {
+    res.render('./products/product-create')
+  },
+  
+  edit: (req, res) => {
+    const id = req.params.id;
+      const product = products.find(product => {
+        return product.id == id
+    })
+
+    res.render('./products/product-edit', {
+      productSent: product
+    })
+  },
+
+  update: (req, res) => {
+    res.send("Producto con id " + req.params.id + " producto editado y guardado!")
+  },
+
+  destroy: (req, res) => {
+    res.send("Producto con id " + req.params.id + " eliminado!")
+  },
 
   }
 
-
-  module.exports = productsController;
+module.exports = productsController;

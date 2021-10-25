@@ -1,0 +1,36 @@
+.containerreg {
+    background-color: #F8F9F9;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+.formulario {
+    font-size: 20px;
+    font-weight: 800;
+    color: #888a8a;
+}
+
+.datos {
+    font-size: 18px;
+    color: #a2a0a1;
+}
+
+button.regres, input#nomape, input#username, input#calle, input#email, input#altura, input#piso, input#depto, input#codpos, input#password, input#confirma-password {    
+    border-radius: 8px;
+    width: 190px;
+    border: 3px solid #d3d3d3;
+}
+
+.datos2 {
+    font-size: 16px;
+    color: #a2a0a1;
+}
+
+.regres {
+    font-size: 18px;
+    color: #888a8a;
+    font-weight: 800;
+}

@@ -9,13 +9,15 @@
 
 
 
-    <main>
+    <main class="fixed">
 
-        <h3>Formulario de registro</h3>
+    <div class="containerreg">
+
+        <h3 class="formulario">Formulario de registro</h3>
 
         <form class="form-login" action="/" method="POST"> 
 
-            <h4>Datos de la cuenta</h4>
+            <h4 class="datos">Datos de la cuenta</h4>
        
             <form class="form-registro" action="/" method="POST">
     
@@ -37,7 +39,7 @@
             </label>
             </div>
     
-            <h4>Fecha de nacimiento</h4>
+            <h4 class="datos2">Fecha de nacimiento</h4>
             
             <div class="div-input">
                 <label for="fechanac">
@@ -45,7 +47,7 @@
                 </label>
             </div>
     
-            <h4>Domicilio</h4>
+            <h4 class="datos2">Domicilio</h4>
             
             <div class="div-input">
                 <label for="calle">
@@ -78,7 +80,7 @@
                 </label>
             </div>
     
-            <h4>Contraseña</h4>
+            <h4 class="datos2">Contraseña</h4>
     
             <div class=div-input>
                 <label for="password">
@@ -97,23 +99,23 @@
                 <div class=div-input>
                 <label for="boton-enviar">
                     
-                    <button type="submit">Registrarme</button>
+                    <button type="submit" class="regres">Registrarme</button>
     
                 </label>
             </div>
     
             <div class=div-input>
                 <label for="boton-reset">
-                    <button type="reset">Restablecer</button>
+                    <button type="reset" class="regres">Restablecer</button>
                 </label>
             </div>
     
     
          </div>
-    
+        
     
         </form>
-
+    </div>
     </main>
 
     <%- include('../partials/footer.ejs') %> 
