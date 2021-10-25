@@ -4,47 +4,36 @@
     <%- include('../partials/head.ejs') %> 
 
     <body>
-    
+
     <%- include('../partials/header.ejs') %>
 
-<main>
+<main class="fixed">
          
-    <h2>Cargar Nuevo Producto</h2>
+    <div class="containerreg">
+    <h2 class="formulario">Cargar Nuevo Producto</h2>
     
     <form>
 
-        <p><label for="myfile">Cargar imagen:</label>
+        <p><label for="myfile" class="datos">Cargar imagen:</label>
         <input type="file" id="myfile" name="myfile"><br><br></p>
 
-        <p><label for="fname">Descripcion:</label><br>
-        <input type="text" id="fname" name="fname"><br></p>
-        <p><label for="lname">Nombre:</label><br>
-        <input type="text" id="lname" name="lname"></p>
-        <p><label for="fname">Precio:</label><br>
-        <input type="text" id="fname" name="fname"><br></p>
-        <p><label for="lname">Consola:</label><br>
+        <p><label for="fname" class="datos">Descripcion:</label><br>
         <input type="text" id="lname" name="lname"><br></p>
-        <p><label for="lname">Categoria:</label><br>
+        <p><label for="lname" class="datos">Nombre:</label><br>
         <input type="text" id="lname" name="lname"></p>
-        <p><label for="lname">Cuotas:</label><br>
+        <p><label for="fname" class="datos">Precio:</label><br>
+        <input type="text" id="lname" name="lname"><br></p>
+        <p><label for="lname" class="datos">Consola:</label><br>
+        <input type="text" id="lname" name="lname"><br></p>
+        <p><label for="lname" class="datos">Categoria:</label><br>
         <input type="text" id="lname" name="lname"></p>
-        <p><input type="submit" value="Enviar"></p>
+        <p><label for="lname" class="datos">Cuotas:</label><br>
+        <input type="text" id="lname" name="lname"></p>
+        <p><input type="submit" class="regres" value="Enviar"></p>
     </form>
-
+</div>
 </main>
 
-
-
+</body>
 <%- include('../partials/footer.ejs') %> 
-
-
-
-</body>
-
-
-
-
-
-</html>
-</body>
 </html>

@@ -18,7 +18,7 @@
     color: #a2a0a1;
 }
 
-button.regres, input#nomape, input#username, input#calle, input#email, input#altura, input#piso, input#depto, input#codpos, input#password, input#confirma-password {    
+button.regres, input#nomape, input#username, input#calle, input#email, input#altura, input#piso, input#depto, input#codpos, input#password, input#confirma-password, input#lname {    
     border-radius: 8px;
     width: 190px;
     border: 3px solid #d3d3d3;
