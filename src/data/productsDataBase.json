@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Gran Turismo",
+        "price": 14900,
+        "image": "granturismo.jpeg",
+        "description": "El nuevo juego de la mitica saga de conduccion de Sony esta de vuelta!",
+        "consola": "PS4, PS5"
+    },
+    {
+        "id": 2,
+        "name": "Resident Evil VIllage",
+        "price": 9200,
+        "image": "re8.jpeg",
+        "description": "Sigue a Ethan Winters en esta nueva aventura de terror!",
+        "consola": "PS4, PS5, XBOX"
+    },
+    {
+        "id": 3,
+        "name": "Battlefield 2042",
+        "price": 10500,
+        "image": "bfps4.jpeg",
+        "description": "Battlefield esta de vuelta, esta vez con una nueva entrega de guerra futurista!",
+        "consola": "PS4, PS5, XBOX"
+    },
+    {
+        "id": 4,
+        "name": "Farcry 6",
+        "price": 9900,
+        "image": "farcry6.jpeg",
+        "description": "Bienvenido a Yara. ¿Es el Fracaso de la Rebelión Inevitable? Únete a la Lucha. ¡Por la Victoría! ¡Por la Libertad!",
+        "consola": "PS4, PS5, XBOX"
+    },
+    {
+        "id": 5,
+        "name": "FIFA 22",
+        "price": 11800,
+        "image": "fifa22.jpeg",
+        "description": "El juego de simulacion de futbol número 1 esta de vuelta!",
+        "consola": "PS4, PS5, XBOX"
+    },
+    {
+        "id": 6,
+        "name": "Halo Infinite",
+        "price": 9700,
+        "image": "halo.jpeg",
+        "description": "Master Chief esta de vuelta!",
+        "consola": "XBOX"
+    },
+    {
+        "id": 7,
+        "name": "Ratchet y Clank: Rift Apart",
+        "price": 9000,
+        "image": "ratchet.jpeg",
+        "description": "Sigue a Ratchet y Clank en esta nueva aventura de plataformas y accion!",
+        "consola": "PS4, PS5"
+    },
+    {
+        "id": 8,
+        "name": "Pokemon Snap",
+        "price": 9500,
+        "image": "pokesnap.jpeg",
+        "description": "Fotografia a tus pokemon favoritos!",
+        "consola": "Nintendo Switch"
+    }
+]

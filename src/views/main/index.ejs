@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <%- include('../partials/head.ejs') %> 
+
+    <body>
+    
+    <%- include('../partials/header.ejs') %>
+
+<main>
+    <section name="Juegos destacados" class="section-destacados">
+            
+        <h2 class="juegos-destacados">Juegos Destacados</h2>
+    
+    <% productsSent.forEach(producto => { %>
+
+    <div class="box-articulos">
+       
+        <article>
+            <a href="/products/detail/<%= producto.id %>"><img src="/img/covers/<%= producto.image %>" alt="imagen del producto" class="responsive"></a>
+            
+            <div class= "div-detalles-articulo">
+               
+                <h3 class="precio"><%= producto.price %></h3>
+                <p><%= producto.name %></p>
+                <h3 class="carrito"><i class="fas fa-cart-plus"></i></h3>
+           
+    <% }) %> 
+    </div>
+        </article>
+</main>
+
+
+
+<%- include('../partials/footer.ejs') %> 
+
+
+
+</body>
+
+
+
+
+
+</html>
+</body>
+</html>
