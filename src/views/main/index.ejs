@@ -10,24 +10,30 @@
 <main>
     <section name="Juegos destacados" class="section-destacados">
             
-        <h2 class="juegos-destacados">Juegos Destacados</h2>
+    <h2 class="juegos-destacados">Juegos Destacados</h2>
     
-    <% productsSent.forEach(producto => { %>
+     <div class="box-articulos">
 
-    <div class="box-articulos">
-       
+        <% productsSent.forEach(producto => { %>
+
         <article>
             <a href="/products/detail/<%= producto.id %>"><img src="/img/covers/<%= producto.image %>" alt="imagen del producto" class="responsive"></a>
             
             <div class= "div-detalles-articulo">
                
-                <h3 class="precio"><%= producto.price %></h3>
+                <h3 class="precio">$<%= producto.price %></h3>
                 <p><%= producto.name %></p>
                 <h3 class="carrito"><i class="fas fa-cart-plus"></i></h3>
-           
-    <% }) %> 
-    </div>
+          
+            </div>
+
         </article>
+        <% }) %> 
+    </div>
+
+    </section>
+
+
 </main>
 
 
@@ -35,13 +41,8 @@
 <%- include('../partials/footer.ejs') %> 
 
 
-
-</body>
-
+    </body>
 
 
 
-
-</html>
-</body>
 </html>
