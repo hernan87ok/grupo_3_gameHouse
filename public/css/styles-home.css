@@ -2,6 +2,7 @@
     height: auto;
     width: 90px;
     display: flex;
+    padding: none;
 }
 
 .responsive {
@@ -15,6 +16,7 @@
     border: 1px solid #000000;
     border-radius: 5px;
     height: 30px;
+    margin-left: -10%;
 }
 
 .lupita {
@@ -22,6 +24,7 @@
     border-radius: 5px;
     width: 30px;
     height: auto;
+    margin-left: -9%;
 }
 
 .fa-search:before {
@@ -43,26 +46,32 @@
 }
 
 .burger-menu {
-    margin-top: 18%;
+    margin-top: 25%;
     color: #ECF0F1;
 }
 
 .fa-bars:before {
     content: "\f0c9";
     color: #ECF0F1;
+    padding-left: 5px;
 }
 
 .right-navbar {
     align-self: center;
+    justify-content: space-between;
 }
 
 .fa-user-circle:before {
     content: "\f2bd";
     color: #F8F9F9;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 .fa-shopping-basket:before {
     content: "\f291";
     color: #F8F9F9;;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .left-navbar {
@@ -87,8 +96,7 @@
 
    text-decoration: none;
    display: inline-block;
-   padding: 5px 5px;
-   font-size: 25px;
+   font-size: 27px;
    color: #222A2C;
 
 }
@@ -397,7 +405,7 @@ box-sizing: border-box;
         font-size: 125%;
     }
     .burger-menu {
-        margin-top: 20%;
+        margin-top: 27%;
     }
     .responsive-logo {
         width: 105px;
