@@ -34,3 +34,5 @@ Todo el público del ambiente del gaming, ya se profesional o no, es nuestro tar
 ## Tablero de control
 
 Para llevar un adecuado y ágil control del proyecto, utilizamos la herramienta Trello. Se trata de un tablero público al que cualquier usuario puede unirse utilizando el link https://trello.com/b/QzbMQqLF/gamehouse .
+
+## 
