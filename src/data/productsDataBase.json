@@ -6,7 +6,7 @@
         "image": "granturismo.jpeg",
         "description": "El nuevo juego de la mitica saga de conduccion de Sony esta de vuelta!",
         "consola": "PS4, PS5",
-        "categoria": "Juego"
+        "formato": "Fisico"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "image": "re8.jpeg",
         "description": "Sigue a Ethan Winters en esta nueva aventura de terror!",
         "consola": "PS4, PS5, XBOX",
-        "categoria": "Juego"
+        "formato": "Fisico"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "image": "bfps4.jpeg",
         "description": "Battlefield esta de vuelta, esta vez con una nueva entrega de guerra futurista!",
         "consola": "PS4, PS5, XBOX",
-        "categoria": "Juego"
+        "formato": "Fisico"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "image": "farcry6.jpeg",
         "description": "Bienvenido a Yara. ¿Es el Fracaso de la Rebelión Inevitable? Únete a la Lucha. ¡Por la Victoría! ¡Por la Libertad!",
         "consola": "PS4, PS5, XBOX",
-        "categoria": "Juego"
+        "formato": "Fisico"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "image": "fifa22.jpeg",
         "description": "El juego de simulacion de futbol número 1 esta de vuelta!",
         "consola": "PS4, PS5, XBOX",
-        "categoria": "Juego"
+        "formato": "Fisico"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "image": "halo.jpeg",
         "description": "Master Chief esta de vuelta!",
         "consola": "XBOX",
-        "categoria": "Juego"
+        "formato": "Fisico"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "image": "ratchet.jpeg",
         "description": "Sigue a Ratchet y Clank en esta nueva aventura de plataformas y accion!",
         "consola": "PS4, PS5",
-        "categoria": "Juego"
+        "formato": "Fisico"
     },
     {
         "id": 8,
@@ -69,6 +69,6 @@
         "image": "pokesnap.jpeg",
         "description": "Fotografia a tus pokemon favoritos!",
         "consola": "Nintendo Switch",
-        "categoria": "Juego"
+        "formato": "Fisico"
     }
 ]
