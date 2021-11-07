@@ -62,8 +62,8 @@
                     <a href="/products/cart"><button class="carrito">
                         <i class="fas fa-shopping-cart"></i>
                     </button></a>
-                    <p><a href="/products/edit/<%= productSent.id %>" class="action-button edit">EDITAR</a></p>
-					<p><form action="/products/delete/<%= productSent.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <p><a href="/products/<%= productSent.id %>/edit" class="action-button edit">EDITAR</a></p>
+					<p><form action="/products/<%= productSent.id %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
 					</form></p>
                    

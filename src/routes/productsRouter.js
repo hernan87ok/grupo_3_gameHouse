@@ -13,23 +13,34 @@ router.get('/', productsController.index);
 
 router.get('/create/', productsController.create);
 
+//POST de crear productos, ACTION
+
+router.post('/', productsController.store);
+
 // formulario editar productos
 
-router.get('/edit/:id/', productsController.edit);
-router.put('/edit/:id/', productsController.update);
+router.get('/:id/edit', productsController.edit);
 
-// eliminar producto
+//PUT edición de productos, ACTION
 
-router.delete('/delete/:id/',  productsController.destroy);
+router.put('/:id/', productsController.update);
+
+// DELETE de productos, ACTION
+
+router.delete('/:id/',  productsController.destroy);
 
 // /products/cart caerá acá
 
 router.get('/cart/',  productsController.cart );
 
+
 // /products/detail/xxxxx caera acá
 
-router.get('/detail/', productsController.detail);
-router.get('/detail/:id/',  productsController.detail);
+// router.get('/detail/', productsController.detail);
+
+// /products/xxx caerá acá también.
+
+router.get('/:id/',  productsController.detail);
 
 
 module.exports = router;

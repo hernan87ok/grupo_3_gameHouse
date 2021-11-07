@@ -11,7 +11,7 @@
          
     <h2>Estas editando:</h2>
     
-    <form action="/products/product-edit/<%= productSent.id %>?_method=PUT" method="POST">
+    <form action="/products/<%= productSent.id %>?_method=PUT" method="POST">
         <div class="form-group">
             <p><label for="exampleFormControlTextarea1">Descripcion:</label></p>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><%= productSent.description %>"</textarea>
