@@ -59,6 +59,10 @@ const productsController = {
     res.send("Producto con id " + req.params.id + " eliminado!")
   },
 
+  store: (req, res) => {
+    //Guardar un nuevo producto, falta implementar
+  }
+
   }
 
 module.exports = productsController;
