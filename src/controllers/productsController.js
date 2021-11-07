@@ -52,7 +52,39 @@ const productsController = {
   },
 
   update: (req, res) => {
-    res.send("Producto con id " + req.params.id + " producto editado y guardado!")
+
+    console.log(req.body);
+    let id = req.body.idProducto;
+		let productToEdit = products.find(product => {
+			return product.id == id;
+		});
+
+
+    console.log(productToEdit);
+		let editedProduct = {
+			id: id,
+			name: req.body.nombreProducto,
+			price: req.body.precioProducto,
+			formato: req.body.formatoProducto,
+			category: req.body.categoriaProducto,
+			description: req.body.descripcionProducto,
+      consola: req.body.categoriaProducto,
+      //se sube con multer
+			image: req.file ? req.file.filename : productToEdit.image
+		}
+		
+		/* Modificamos el array */
+		products.forEach((producto, index) => {
+			if (producto.id == id){
+				products[index] = editedProduct;
+			}
+		});
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/products");
+	
+
+    // res.send("Producto con id " + req.params.id + " producto editado y guardado!")
   },
 
   destroy: (req, res) => {

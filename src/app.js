@@ -6,22 +6,29 @@ const methodOverride = require('method-override');
 // Express
 const app = express();
 
-// Route System require and use
-const mainRouter = require('./routes/mainRouter');
-const productsRouter = require('./routes/productsRouter');
-const usersRouter = require ('./routes/usersRouter');
-
-app.use('/', mainRouter);
-app.use('/products', productsRouter);
-app.use('/users', usersRouter);
-
 // Template Engine
 app.set('views', path.join(__dirname, '/views'));
 app.set ("view engine", "ejs");
 
 //
+app.use(express.urlencoded({ extended: false })); // Para que se usa??
+app.use(express.json()); // Para que se usa??
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
+
+// Route System require and use
+
+
+const mainRouter = require('./routes/mainRouter');
+const productsRouter = require('./routes/productsRouter');
+const usersRouter = require ('./routes/usersRouter');
+
+
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
+
+
 
 // Server Listen
 

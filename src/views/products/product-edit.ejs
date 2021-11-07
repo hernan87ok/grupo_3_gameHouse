@@ -11,19 +11,23 @@
          
     <h2>Estas editando:</h2>
     
-    <form action="/products/<%= productSent.id %>?_method=PUT" method="POST">
+    <form action="/products/<%= productSent.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="form-group">
-            <p><label for="exampleFormControlTextarea1">Descripcion:</label></p>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><%= productSent.description %>"</textarea>
+            <p><label for="descripcion">Descripcion:</label></p>
+            <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" rows="3"><%= productSent.description %></textarea>
         </div>
-        <p><label for="lname">Nombre:</label><br></p>
-        <input type="text" id="lname" name="lname" value="<%= productSent.name %>">
-        <p><label for="fname">Precio:</label><br></p>
-        <input type="text" id="fname" name="fname" value="<%= productSent.price %>"><br>
-        <p><label for="lname">Formato:</label><br></p>
-        <input type="text" id="lname" name="lname" value="<%= productSent.formato %>"><br>
-        <p><label for="lname">Consola:</label><br></p>
-        <input type="text" id="lname" name="lname" value="<%= productSent.consola %>"><br>
+        <p><label for="idProducto">ID:</label><br></p>
+        <input type="text" id="idProducto" name="idProducto" value="<%= productSent.id %>">
+        <p><label for="nombreProducto">Nombre:</label><br></p>
+        <input type="text" id="nombreProducto" name="nombreProducto" value="<%= productSent.name %>">
+        <p><label for="precioProducto">Precio:</label><br></p>
+        <input type="text" id="precioProducto" name="precioProducto" value="<%= productSent.price %>"><br>
+        <p><label for="formatoProducto">Formato:</label><br></p>
+        <input type="text" id="formatoProducto" name="formatoProducto" value="<%= productSent.formato %>"><br>
+        <p><label for="categoriaProducto">Categoría:</label><br></p>
+        <input type="text" id="categoriaProducto" name="categoriaProducto" value="<%= productSent.consola %>"><br>
+        <p><label for="imagenProducto">Imágen:</label><br></p>
+        <input type="file" id="imagenProducto" name="imagenProducto">
         <p><input type="submit" value="Enviar"></p>
     </form>
 
