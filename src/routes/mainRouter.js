@@ -6,7 +6,7 @@ const productsController = require('../controllers/productsController');
 
 router.get('/', mainController.home);
 
-router.get('/main/index/', mainController.index);
+// router.get('/main/index/', mainController.index);
 
 
 

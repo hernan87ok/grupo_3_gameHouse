@@ -5,6 +5,10 @@ const productsController = require ('../controllers/productsController');
 
 //Ir agregando métodos de producto que deberan estar en el controller de producto
 
+//Home de productos 
+
+router.get('/', productsController.index);
+
 // formulario crear productos
 
 router.get('/create/', productsController.create);

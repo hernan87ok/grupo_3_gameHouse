@@ -14,6 +14,14 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
 
+
+
+  index: (req, res) => {
+    res.render('./products/list', {
+      productsSent: products
+    });
+  },
+
   detail: (req, res) => {
       const id = req.params.id;
       const product = products.find(product => {
