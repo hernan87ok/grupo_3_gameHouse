@@ -10,15 +10,6 @@
   "image": "1636326346118_img_.jpeg"
  },
  {
-  "id": 2,
-  "name": "Resident Evil VIllage",
-  "price": 9200,
-  "image": "re8.jpeg",
-  "description": "Sigue a Ethan Winters en esta nueva aventura de terror!",
-  "consola": "PS4, PS5, XBOX",
-  "formato": "Fisico"
- },
- {
   "id": 3,
   "name": "Battlefield 2042",
   "price": 10500,
