@@ -12,25 +12,25 @@
     <div class="containerreg">
     <h2 class="formulario">Cargar Nuevo Producto</h2>
     
-    <form action="/products" method="POST">
+    <form action="/products" method="POST" enctype="multipart/form-data">
 
-        <p><label for="myfile" class="datos">Cargar imagen:</label>
-        <input type="file" id="myfile" name="myfile"><br><br></p>
-
-        <p><label for="fname" class="datos">Descripcion:</label><br>
-        <input type="text" id="lname" name="descripcion"><br></p>
-        <p><label for="lname" class="datos">Nombre:</label><br>
-        <input type="text" id="lname" name="nombre"></p>
-        <p><label for="fname" class="datos">Precio:</label><br>
-        <input type="text" id="lname" name="precio"><br></p>
-        <p><label for="lname" class="datos">Consola:</label><br>
-        <input type="text" id="lname" name="consola"><br></p>
-        <p><label for="lname" class="datos">Formato:</label><br>
-        <input type="text" id="lname" name="formato"></p>
-        <p><label for="lname" class="datos">Cuotas:</label><br>
-        <input type="text" id="lname" name="cuotas"></p>
+        <p><label for="imagenProducto">Imágen:</label><br></p>
+        <input type="file" id="imagenProducto" name="imagenProducto">
+        <p><label for="descripcion" class="datos">Descripcion:</label><br>
+        <input type="text" id="descripcion" name="descripcion"><br></p>
+        <p><label for="nombre" class="datos">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"></p>
+        <p><label for="precio" class="datos">Precio:</label><br>
+        <input type="text" id="precio" name="precio"><br></p>
+        <p><label for="categoria" class="datos">Categoría:</label><br>
+        <input type="text" id="categoria" name="categoria"><br></p>
+        <p><label for="formato" class="datos">Formato:</label><br>
+        <input type="text" id="formato" name="formato"></p>
+        <p><label for="cuotas" class="datos">Cuotas:</label><br>
+        <input type="text" id="cuotas" name="cuotas"></p>
         <p><input type="submit" class="regres" value="Enviar"></p>
     </form>
+
 </div>
 </main>
 

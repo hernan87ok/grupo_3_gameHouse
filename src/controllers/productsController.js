@@ -52,8 +52,6 @@ const productsController = {
   },
 
   update: (req, res) => {
-
-    console.log(req.body);
     let id = req.body.idProducto;
 		let productToEdit = products.find(product => {
 			return product.id == id;
@@ -65,10 +63,8 @@ const productsController = {
 			id: id,
 			name: req.body.nombreProducto,
 			price: req.body.precioProducto,
-			formato: req.body.formatoProducto,
 			category: req.body.categoriaProducto,
 			description: req.body.descripcionProducto,
-      consola: req.body.consolaProducto,
       //se sube con multer
 			image: req.file ? req.file.filename : productToEdit.image
 		}
@@ -100,19 +96,15 @@ const productsController = {
   
   // (post) Create - Método para guardar la info
   store: (req, res) => {
-    console.log(req.body)
     const newProduct = {
       //Guardamos el producto
       id: products[products.length - 1].id + 1,
       name: req.body.nombre,
       price: req.body.precio,
-      discount: req.body.descuento,
       category: req.body.formato,
-      consola: req.body.consola,
       description: req.body.descripcion,
-      image: req.body.filename
+      image: req.file ? req.file.filename : null
     }
-    
 
     products.push(newProduct);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
