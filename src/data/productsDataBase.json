@@ -1,13 +1,22 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "name": "Gran Turismo",
-  "price": "14905",
-  "formato": "Fisico",
-  "category": "PS4, PS5",
-  "description": "El nuevo juego de la mitica saga de conduccion de Sony, esta de vuelta!",
+  "price": 14900,
+  "image": "granturismo.jpeg",
+  "description": "El nuevo juego de la mitica saga de conduccion de Sony esta de vuelta!",
   "consola": "PS4, PS5",
-  "image": "1636326346118_img_.jpeg"
+  "category": "Simulador"
+ },
+ {
+  "id": "2",
+  "name": "Resident Evil VIllage",
+  "price": "9200",
+  "formato": "",
+  "category": "Terror",
+  "description": "Sigue a Ethan Winters en esta nueva aventura de terror!",
+  "consola": "PS4, PS5, XBOX",
+  "image": "re8.jpeg"
  },
  {
   "id": 3,
@@ -16,7 +25,7 @@
   "image": "bfps4.jpeg",
   "description": "Battlefield esta de vuelta, esta vez con una nueva entrega de guerra futurista!",
   "consola": "PS4, PS5, XBOX",
-  "formato": "Fisico"
+  "category": "First person shooter"
  },
  {
   "id": 4,
@@ -25,7 +34,7 @@
   "image": "farcry6.jpeg",
   "description": "Bienvenido a Yara. ¿Es el Fracaso de la Rebelión Inevitable? Únete a la Lucha. ¡Por la Victoría! ¡Por la Libertad!",
   "consola": "PS4, PS5, XBOX",
-  "formato": "Fisico"
+  "category": "First person shooter"
  },
  {
   "id": 5,
@@ -34,7 +43,7 @@
   "image": "fifa22.jpeg",
   "description": "El juego de simulacion de futbol número 1 esta de vuelta!",
   "consola": "PS4, PS5, XBOX",
-  "formato": "Fisico"
+  "category": "Sports"
  },
  {
   "id": 6,
@@ -43,7 +52,7 @@
   "image": "halo.jpeg",
   "description": "Master Chief esta de vuelta!",
   "consola": "XBOX",
-  "formato": "Fisico"
+  "category": "First person shooter"
  },
  {
   "id": 7,
@@ -52,7 +61,7 @@
   "image": "ratchet.jpeg",
   "description": "Sigue a Ratchet y Clank en esta nueva aventura de plataformas y accion!",
   "consola": "PS4, PS5",
-  "formato": "Fisico"
+  "category": "Adventure"
  },
  {
   "id": 8,
@@ -61,6 +70,6 @@
   "image": "pokesnap.jpeg",
   "description": "Fotografia a tus pokemon favoritos!",
   "consola": "Nintendo Switch",
-  "formato": "Fisico"
+  "category": "Terror"
  }
 ]

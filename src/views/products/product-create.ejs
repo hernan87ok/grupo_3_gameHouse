@@ -12,23 +12,23 @@
     <div class="containerreg">
     <h2 class="formulario">Cargar Nuevo Producto</h2>
     
-    <form>
+    <form action="/products" method="POST">
 
         <p><label for="myfile" class="datos">Cargar imagen:</label>
         <input type="file" id="myfile" name="myfile"><br><br></p>
 
         <p><label for="fname" class="datos">Descripcion:</label><br>
-        <input type="text" id="lname" name="lname"><br></p>
+        <input type="text" id="lname" name="descripcion"><br></p>
         <p><label for="lname" class="datos">Nombre:</label><br>
-        <input type="text" id="lname" name="lname"></p>
+        <input type="text" id="lname" name="nombre"></p>
         <p><label for="fname" class="datos">Precio:</label><br>
-        <input type="text" id="lname" name="lname"><br></p>
+        <input type="text" id="lname" name="precio"><br></p>
         <p><label for="lname" class="datos">Consola:</label><br>
-        <input type="text" id="lname" name="lname"><br></p>
+        <input type="text" id="lname" name="consola"><br></p>
         <p><label for="lname" class="datos">Formato:</label><br>
-        <input type="text" id="lname" name="lname"></p>
+        <input type="text" id="lname" name="formato"></p>
         <p><label for="lname" class="datos">Cuotas:</label><br>
-        <input type="text" id="lname" name="lname"></p>
+        <input type="text" id="lname" name="cuotas"></p>
         <p><input type="submit" class="regres" value="Enviar"></p>
     </form>
 </div>
