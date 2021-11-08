@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/hernan87ok/grupo_3_gamerHouse#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "js": "^0.1.0",
     "method-override": "^3.0.0",
+    "multer": "^1.4.3",
     "nodemon": "^2.0.13"
   }
 }

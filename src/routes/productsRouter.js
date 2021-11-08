@@ -1,6 +1,18 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
+const multer = require ('multer');
+//Configuro multer
+const storage = multer.diskStorage({
+    destination: function (req,file,cb) {
+        cb(null, path.join(__dirname,'..','..','public/img/covers/'));
+    },
+    filename: function(req, file, cb) {
+        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`); 
+    }
+});
 
+const uploadFile = multer ({storage});
 const productsController = require ('../controllers/productsController');
 
 //Ir agregando métodos de producto que deberan estar en el controller de producto
@@ -23,7 +35,7 @@ router.get('/:id/edit', productsController.edit);
 
 //PUT edición de productos, ACTION
 
-router.put('/:id/', productsController.update);
+router.put('/:id/', uploadFile.single('imagenProducto'),productsController.update);
 
 // DELETE de productos, ACTION
 
