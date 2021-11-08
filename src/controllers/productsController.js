@@ -60,7 +60,7 @@ const productsController = {
 		});
 
 
-    console.log(productToEdit);
+    // console.log(productToEdit);
 		let editedProduct = {
 			id: id,
 			name: req.body.nombreProducto,
