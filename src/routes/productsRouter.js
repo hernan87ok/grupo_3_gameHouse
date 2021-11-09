@@ -27,7 +27,7 @@ router.get('/create/', productsController.create);
 
 //POST de crear productos, ACTION
 
-router.post('/', productsController.store);
+router.post('/', uploadFile.single('imagenProducto'), productsController.store);
 
 // formulario editar productos
 

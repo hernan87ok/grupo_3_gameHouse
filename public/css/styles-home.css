@@ -432,6 +432,7 @@ box-sizing: border-box;
     }
     .input-nav {
         height: 35px;
+        width: 500px;
     }
     .lupita {
         width: 35px;

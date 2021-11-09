@@ -52,8 +52,6 @@ const productsController = {
   },
 
   update: (req, res) => {
-
-    console.log(req.body);
     let id = req.body.idProducto;
 		let productToEdit = products.find(product => {
 			return product.id == id;
@@ -65,10 +63,8 @@ const productsController = {
 			id: id,
 			name: req.body.nombreProducto,
 			price: req.body.precioProducto,
-			formato: req.body.formatoProducto,
 			category: req.body.categoriaProducto,
 			description: req.body.descripcionProducto,
-      consola: req.body.categoriaProducto,
       //se sube con multer
 			image: req.file ? req.file.filename : productToEdit.image
 		}
@@ -88,13 +84,33 @@ const productsController = {
   },
 
   destroy: (req, res) => {
+    const id = req.params.id
+    const finalProducts = products.filter(product => {
+			return product.id != id
+		});
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
+    res.redirect("/products");
     res.send("Producto con id " + req.params.id + " eliminado!")
   },
-
+  
+  // (post) Create - Método para guardar la info
   store: (req, res) => {
-    //Guardar un nuevo producto, falta implementar
-  }
+    const newProduct = {
+      //Guardamos el producto
+      id: products[products.length - 1].id + 1,
+      name: req.body.nombre,
+      price: req.body.precio,
+      category: req.body.formato,
+      description: req.body.descripcion,
+      image: req.file ? req.file.filename : null
+    }
 
-  }
+    products.push(newProduct);
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+    res.redirect("/products")
+  },
+}
 
 module.exports = productsController;
