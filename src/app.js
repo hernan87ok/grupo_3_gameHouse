@@ -10,14 +10,15 @@ const app = express();
 app.set('views', path.join(__dirname, '/views'));
 app.set ("view engine", "ejs");
 
-//
+//Permite recibir la información que viaja a través de un formulario vía POST
 app.use(express.urlencoded({ extended: false })); 
+
+
 app.use(express.json()); 
-app.use(express.static('public'));
+app.use(express.static('./public'));
 app.use(methodOverride('_method'));
 
 // Route System require and use
-
 
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');

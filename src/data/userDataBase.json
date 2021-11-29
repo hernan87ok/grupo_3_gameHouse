@@ -1,39 +1,38 @@
 [
-    {
-        "id": 1,
-        "firstName": "Ariel",
-        "lastName": "Davico",
-        "image": "",
-        "email": "adavico@gmail.com",
-        "password": "contraseña1",
-        "category": "categoria"
-    },
-    {
-        "id": 2,
-        "firstName": "Lucas",
-        "lastName": "Speroni",
-        "image": "",
-        "email": "lsperoni95@gmail.com",
-        "password": "contraseña2",
-        "category": "categoria"
-    },
-    {
-        "id": 3,
-        "firstName": "Hernan",
-        "lastName": "Cordary",
-        "image": "",
-        "email": "hernancordary1@gmail.com",
-        "password": "contraseña3",
-        "category": "categoria"
-    },
-    {
-        "id": 4,
-        "firstName": "Federico",
-        "lastName": "Morales",
-        "image": "",
-        "email": "fedemorales15@gmail.com",
-        "password": "contraseña4",
-        "category": "categoria"
-    }
-
+ {
+  "id": 1,
+  "firstName": "Ariel",
+  "lastName": "Davico",
+  "avatar": "default.png",
+  "email": "adavico@gmail.com",
+  "password": "contraseña1",
+  "category": "categoria"
+ },
+ {
+  "id": 2,
+  "firstName": "Lucas",
+  "lastName": "Speroni",
+  "avatar": "default.png",
+  "email": "lsperoni95@gmail.com",
+  "password": "contraseña2",
+  "category": "categoria"
+ },
+ {
+  "id": 3,
+  "firstName": "Hernan",
+  "lastName": "Cordary",
+  "avatar": "default.png",
+  "email": "hernancordary1@gmail.com",
+  "password": "contraseña3",
+  "category": "categoria"
+ },
+ {
+  "id": 4,
+  "firstName": "Federico",
+  "lastName": "Morales",
+  "avatar": "default.png",
+  "email": "fedemorales15@gmail.com",
+  "password": "contraseña4",
+  "category": "categoria"
+ }
 ]

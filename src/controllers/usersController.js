@@ -1,63 +1,33 @@
+const { validationResult }= require('express-validator');
 
-// let platos = [
-//     {
-//     id: 1,
-//     nombre: 'Carpaccio fresco',
-//     descripcion: 'Entrada Carpaccio de salmón con cítricos',
-//     precio: 'U$S 65.50',
-//     },
-//     {
-//     id:2,
-//     nombre: 'Risotto de berenjena',
-//     descripcion: 'Risotto de berenjena y queso de cabra ',
-//     precio: 'U$S 47.00',
-//     },
-//     {
-//     id:3,
-//     nombre: 'Mousse de arroz',
-//     descripcion: 'Mousse de arroz con leche y aroma de azahar ',
-//     precio: 'U$S 27.50',
-//     },
-//     {
-//     id:4,
-//     nombre: 'Espárragos blancos',
-//     descripcion: 'Espárragos blancos con vinagreta de verduras y jamón ibérico',
-//     precio: 'U$S 37.50',
-//     }];
-  
-  
-  
-  
-  
-//   const usersController = {
-  
-  
-  //     detalle: (req, res) => {
-        
-  //       let idPlato = req.params.id;
-  //       let plato = null;
+const User = require('../models/User.js');
 
-  //       platos.forEach(function (elemento) {
-
-  //           if(elemento.id == idPlato)
-  //               plato = elemento;
-
-  //       })
-
-  //       res.render('detalleMenu.ejs', {plato} );
-  //     },
-  // };
-
-  const usersController = {
-
+const usersController = {
     login: (req,res) => {
       res.render('./users/login.ejs');
     },
 
     register: (req,res) => {
       res.render('./users/register.ejs');
-    }
+    },
 
+    processRegister: (req, res) => {
+        const resultValidation = validationResult(req);
+                
+        if (resultValidation.errors.length > 0) {
+          return res.render('./users/register.ejs', {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+          });
+        }
+
+        User.create(req.body); 
+          return res.send('Se creó el usuario');
+    },
+
+    profile: (req, res) => {
+      return res.render('./users/profile.ejs');
+    }
   }
 
   

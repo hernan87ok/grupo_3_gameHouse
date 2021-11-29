@@ -3,7 +3,7 @@
 
     <%- include('../partials/head.ejs') %> 
 
-    <body>
+<body>
     
     <%- include('../partials/header.ejs') %> 
 
@@ -11,111 +11,87 @@
 
     <main class="fixed">
 
-    <div class="containerreg">
+        <div class="containerreg">
 
-        <h3 class="formulario">Formulario de registro</h3>
+            <h3 class="formulario">Formulario de registro</h3>
 
-        <form class="form-login" action="/" method="POST"> 
-
-            <h4 class="datos">Datos de la cuenta</h4>
-       
-            <form class="form-registro" action="/" method="POST">
-    
-            <div class="div-input">
-            <label for="nomape">
-             <input type="text" required pattern=".{3,100}" placeholder="Nombre y apellido" name="nomape" id="nomape">
-            </label>
-        </div>
-    
-            <div class="div-input">
-            <label for="username">
-                <input type="text" required pattern=".{3,100}" placeholder="Nombre de usuario" name="username" id="username">
-            </label>
-            </div>    
-    
-            <div class="div-input">
-            <label for="email">
-            <input type="email" required placeholder="e-mail" name="email" id="email">
-            </label>
-            </div>
-    
-            <h4 class="datos2">Fecha de nacimiento</h4>
-            
-            <div class="div-input">
-                <label for="fechanac">
-                 <input type="date"  required name="nomape" id="nomape">
-                </label>
-            </div>
-    
-            <h4 class="datos2">Domicilio</h4>
-            
-            <div class="div-input">
-                <label for="calle">
-                 <input type="text"  placeholder="Calle" required name="calle" id="calle">
-                </label>
-            </div>
-
-            <div class="div-input">
-                <label for="altura">
-                 <input type="text"   placeholder="Altura" required name="altura" id="altura">
-                </label>
-            </div>
-
-            <div class="div-input">
-                <label for="piso">
-                 <input type="text"   placeholder="Piso" required name="piso" id="piso">
-                </label>
-            </div>
-
-            <div class="div-input">
-                <label for="depto">
-                 <input type="text"   placeholder="Departamento" required name="depto" id="depto">
-                </label>
-            </div>
-
-
-            <div class="div-input">
-                <label for="codpost">
-                 <input type="text"  placeholder="Código postal" required name="codpos" id="codpos">
-                </label>
-            </div>
-    
-            <h4 class="datos2">Contraseña</h4>
-    
-            <div class=div-input>
-                <label for="password">
-                    <input type="password"  name="pasword" id="password" placeholder="Contraseña">
-                </label>
-            </div>
-    
-            <div class=div-input>
-                <label for="confirma-password">
-                    <input type="password"  name="confirma-pasword" id="confirma-password" placeholder="Confirmar contraseña">
-                </label>
-            </div>
-    
-            <div class="div-botones">
-           
-                <div class=div-input>
-                <label for="boton-enviar">
-                    
-                    <button type="submit" class="regres">Registrarme</button>
-    
-                </label>
-            </div>
-    
-            <div class=div-input>
-                <label for="boton-reset">
-                    <button type="reset" class="regres">Restablecer</button>
-                </label>
-            </div>
-    
-    
-         </div>
+                <h4 class="datos">Datos de la cuenta</h4>
         
-    
-        </form>
-    </div>
+                <form class="form-registro" action="/users/register" method="POST" enctype="multipart/form-data">
+        
+                    <div class="div-input">
+                        <input type="text"  placeholder="Nombre" name="firstName" id="firstName" 
+                        class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.firstName : null %>">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <div class="text-danger">
+                                <%= errors.firstName.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <div class="div-input">
+                        <input type="text"  placeholder="Apellido" name="lastName" id="lastName" 
+                        class="form-control is-invalid <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.lastName : null %>">
+                        <% if (locals.errors && errors.lastName) { %>
+                            <div class="text-danger">
+                                <%= errors.lastName.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+            
+                    <div class="div-input">
+                        <input type="text" placeholder="e-mail" name="email" id="email" 
+                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <h4 class="datos2">Contraseña</h4>
+            
+                    <div class=div-input>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" 
+                        class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.password : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <h4 class="datos2">Imagen</h4>
+                        <div class=div-input>
+                            <input type="file" name="avatar">
+                            <% if (locals.errors && errors.avatar) { %>
+                                <div class="text-danger">
+                                    <%= errors.avatar.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+            
+                    <div class="div-botones">
+                
+                        <div class=div-input>
+                        <label for="boton-enviar">                            
+                            <button type="submit" class="regres">Registrarme</button>            
+                        </label>
+                    </div>
+            
+                    <div class=div-input>
+                        <label for="boton-reset">
+                            <button type="reset" class="regres">Restablecer</button>
+                        </label>
+                    </div>
+            
+            
+                </form>
+        </div>
     </main>
 
     <%- include('../partials/footer.ejs') %> 
