@@ -101,8 +101,9 @@ const productsController = {
       id: products[products.length - 1].id + 1,
       name: req.body.nombre,
       price: req.body.precio,
-      category: req.body.formato,
+      category: req.body.category,
       description: req.body.descripcion,
+      console: req.body.console,
       image: req.file ? req.file.filename : null
     }
 
