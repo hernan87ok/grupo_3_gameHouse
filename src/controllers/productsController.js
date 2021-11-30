@@ -91,7 +91,6 @@ const productsController = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
     res.redirect("/products");
-    res.send("Producto con id " + req.params.id + " eliminado!")
   },
   
   // (post) Create - Método para guardar la info
