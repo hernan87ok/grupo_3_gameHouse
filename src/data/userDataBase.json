@@ -34,5 +34,13 @@
   "email": "fedemorales15@gmail.com",
   "password": "contraseña4",
   "category": "categoria"
+ },
+ {
+  "id": 5,
+  "firstName": "Andres",
+  "lastName": "Davico",
+  "email": "dabo-st@hotmail.com",
+  "password": "$2a$10$zgzjFeC4P350CImtvMXzTOWorLK0CQad/hQArD.XieTGZN9UOCVXu",
+  "avatar": "1638301481005_img.png"
  }
 ]

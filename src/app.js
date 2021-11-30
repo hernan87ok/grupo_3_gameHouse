@@ -2,9 +2,23 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookies = require('cookie-parser');
 
 // Express
 const app = express();
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 // Template Engine
 app.set('views', path.join(__dirname, '/views'));

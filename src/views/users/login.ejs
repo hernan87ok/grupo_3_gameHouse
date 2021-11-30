@@ -16,26 +16,27 @@
 
         <h3 class="formulario">Ingresá a tu cuenta</h3>
 
-        <form class="form-login" action="/" method="POST"> 
+        <form class="form-login" action="/users/login" method="POST"> 
 
             <div class="div-input">
-                <label for="user">
-                 <input type="text" pattern=".{3,100}" placeholder="Usuario" name="user" id="username">
-                </label>
+					<input type="text" placeholder="Correo electrónico" name="email" id="username" class="form-control">
+					<% if (locals.errors && errors.email) { %>
+						<div class="text-danger">
+							<%= errors.email.msg %>
+						</div>
+					<% } %>
             </div>
         
                 <div class="div-input">
-                <label for="password">
-                    <input type="text" placeholder="Password" name="password" id="password">
-                </label>
+                <input type="password" placeholder="Contraseña" name="password" id="password" class="form-control">
+                <div class="invalid-feedback">
+                </div>
             </div>    
             
-            <div class="div-recordar-password">
-
-                <h4 class="datos2">Recordar contraseña</h4><input type="checkbox" name="recordar-password" name="recordar-password" id="recordar-password" >
-
-
-
+            <div>
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="remember_user"> Recordar mi usuario
+                </label>
             </div>
 
 
@@ -51,7 +52,7 @@
 
         <h4><a href="/">Olvidé mi contraseña</h4></a>
             <br>
-        <h4><a href="/register">No tenés cuenta? Registrate!</h4></a>
+        <h4><a href="/users/register">No tenés cuenta? Registrate!</h4></a>
     
     </div>
 
