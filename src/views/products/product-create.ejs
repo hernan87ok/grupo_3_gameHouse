@@ -7,29 +7,40 @@
 
     <%- include('../partials/header.ejs') %>
 
-<main class="fixed">
+    <main class="fixed">
          
-    <div class="containerreg">
-    <h2 class="formulario">Cargar Nuevo Producto</h2>
+        <div class="containerreg">
+        
+            <h2 class="formulario">Cargar Nuevo Producto</h2>
+        
+        <form action="/products" method="POST" enctype="multipart/form-data">
     
-    <form action="/products" method="POST" enctype="multipart/form-data">
-
-        <p><label for="imagenProducto">Imágen:</label><br></p>
-        <input type="file" id="imagenProducto" name="imagenProducto">
-        <p><label for="descripcion" class="datos">Descripcion:</label><br>
-        <input type="text" id="descripcion" name="descripcion"><br></p>
-        <p><label for="nombre" class="datos">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre"></p>
-        <p><label for="precio" class="datos">Precio:</label><br>
-        <input type="text" id="precio" name="precio"><br></p>
-        <p><label for="categoria" class="datos">Categoría:</label><br>
-        <input type="text" id="categoria" name="categoria"><br></p>
-        <!-- <p><label for="cuotas" class="datos">Cuotas:</label><br>
-        <input type="text" id="cuotas" name="cuotas"></p> -->
-        <p><input type="submit" class="regres" value="Enviar"></p>
-    </form>
-
-</div>
+            <p><label for="imagenProducto" class="datos">Imágen:</label><br></p>
+            <input type="file" id="imagenProducto" name="imagenProducto">
+            <p><label for="nombre" class="datos">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"></p>
+            <p><label for="consola" class="datos">Consola:</label><br>
+            <input type="text" id="consola" name="consola"><br></p>
+            <p><label for="precio" class="datos">Precio:</label><br>
+                <input type="text" id="precio" name="precio"><br></p>
+            <p><label for="categoria" class="datos">Categoría:</label><br>
+            <div class="form-group">
+                    <label for="select"></label>
+                    <select class="form-control" id="formControl">
+                      <option>Accion</option>
+                      <option>RPG</option>
+                      <option>Plataformas</option>
+                      <option>Rol</option>
+                      <option>Deportes</option>
+                      <option>Shooter</option>
+                      <option>Infantiles</option>
+                      <option>Terror</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <p><label for="descripcion" class="datos">Descripcion:</label></p>
+                <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" rows="3"></textarea>
+            </div>
 </main>
 
 </body>
