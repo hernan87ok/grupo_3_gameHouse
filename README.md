@@ -37,4 +37,5 @@ Para llevar un adecuado y ágil control del proyecto, utilizamos la herramienta 
 
 ## Estructura
 
-![Gamerhouse__dynobird com__2021-12-16 18_23_16](https://user-images.githubusercontent.com/89488172/146450894-5d9afd6e-e339-4d46-953e-fea511c7fa0b.png)
+![Gamerhouse__dynobird com__2021-12-16 18_23_54](https://user-images.githubusercontent.com/89488172/146451029-29c7304e-6c0a-4eb0-b9ab-da36f3dc6a5f.png)
+
