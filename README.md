@@ -35,4 +35,6 @@ Todo el público del ambiente del gaming, ya se profesional o no, es nuestro tar
 
 Para llevar un adecuado y ágil control del proyecto, utilizamos la herramienta Trello. Se trata de un tablero público al que cualquier usuario puede unirse utilizando el link https://trello.com/b/QzbMQqLF/gamehouse .
 
-## 
+## Estructura
+
+![Gamerhouse__dynobird com__2021-12-16 18_23_16](https://user-images.githubusercontent.com/89488172/146450894-5d9afd6e-e339-4d46-953e-fea511c7fa0b.png)
