@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS 'structure';
-USE 'structure';
+CREATE DATABASE IF NOT EXISTS gamerhouse;
+USE gamerhouse;
 
 CREATE TABLE `users` (
-   `ID` INT AUTO_INCREMENT,
+   `ID` INT NOT NULL AUTO_INCREMENT,
    `firstName` VARCHAR(255) NOT NULL,
    `lastName` VARCHAR(255) NOT NULL,
    `email` VARCHAR(50) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE `products` (
 );
 
 CREATE TABLE `categories` (
-   `ID` in,
+   `ID` INT NOT NULL  AUTO_INCREMENT,
    `category` VARCHAR(50) NOT NULL,
    PRIMARY KEY (`ID`)
 );
