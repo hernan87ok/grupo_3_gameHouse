@@ -17,13 +17,12 @@
         <% productsSent.forEach(producto => { %>
 
         <article>
-            <a href="/products/<%= producto.ID %>"><img src="/img/covers/<%= producto.image %>" alt="imagen del producto" class="responsive"></a>
+            <a href="/products/<%= producto.id %>"><img src="/img/covers/<%= producto.image %>" alt="imagen del producto" class="responsive"></a>
             
             <div class= "div-detalles-articulo">
                
                 <h3 class="precio">$<%= producto.price %></h3>
                 <p><%= producto.name %></p>
-                <p><%= producto.category.category %></p>
                 <h3 class="carrito"><i class="fas fa-cart-plus"></i></h3>
           
             </div>

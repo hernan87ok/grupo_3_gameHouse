@@ -16,6 +16,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+
 let Products = db.Product;
 let Categories = db.Category;
 // ----
@@ -125,6 +126,22 @@ const productsController = {
 
 // ------ METODOS CRUD DB -------- //
 
+
+indexDB: (req, res) => {
+  let products = Products.findAll( {include: ['category']});
+  Promise
+  .all([products])
+  .then ( ([products]) => {
+   
+      res.render('./products/list', {
+      productsSent: products
+    })
+  })
+  .catch(error => res.send(error))
+}, 
+//end index
+
+
 //MOSTRAR FORMULARIO PARA CREAR PRODUCTO 
 
 add: function (req, res) {
@@ -135,7 +152,7 @@ add: function (req, res) {
   .then(([allProductCategories]) => {
       return res.render('./products/product-create', {allProductCategories})})
   .catch(error => res.send(error))
-}, //fin add
+}, //end add
 
 
 //CREAR NUEVO PRODUCTO
@@ -166,10 +183,11 @@ Products
 editDB: (req, res) => {
   let id = req.params.id;
   let categories = Categories.findAll();
-  let productToEdit = Products.findByPk(id, {include: ['categories']});
+  let productToEdit = Products.findByPk(id, {include: ['category']});
   Promise
   .all([productToEdit, categories])
   .then(([Product, allCategories]) => {
+    // console.log(Product);
     return res.render('./products/product-edit',
     {
       productSent : Product,
@@ -180,8 +198,50 @@ editDB: (req, res) => {
 },
 
 
+//EDICIÓN EN DB
+
+updateDB: function (req,res) {
+ let idProducto = req.body.idProducto;
+ Products
+ .update (
+   {
+    name: req.body.nombreProducto,
+    price: req.body.precioProducto,
+    id_category: req.body.idCategoriaProducto, //Ojo con este que no estaba en el anterior
+    description: req.body.descripcionProducto,
+    //se sube con multer
+    image: req.file ? req.file.filename : null
+   },
+   {
+     where: {ID: idProducto}
+   })
+   .then(() => {
+     return res.redirect('/products')})
+    .catch(error => res.send(error))
+   },
+
+//end updateDB - end Edición
 
 
+destroyDB: function (req,res) {
+  let productId = req.params.id;
+  Products
+  .destroy({where: {id: productId}, force: true})
+  .then (()=>{
+    return res.redirect('/products')})
+    .catch(error => res.send(error))
+},
+//end destroyDB
+
+detailDB:  (req, res) => {
+  Products.findByPk(req.params.id,
+      {
+          include : ['category']
+      })
+      .then(productSent => {
+          res.render('./products/detail', {productSent});
+      });
+},
 
 
 

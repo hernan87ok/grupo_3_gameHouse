@@ -19,7 +19,8 @@ const productsController = require ('../controllers/productsController');
 
 //Home de productos 
 
-router.get('/', productsController.index);
+//reemplazado debajo por indexDB
+// router.get('/', productsController.index);
 
 // formulario crear productos
 
@@ -31,16 +32,16 @@ router.get('/', productsController.index);
 // router.post('/', uploadFile.single('imagenProducto'), productsController.store);
 
 // formulario editar productos
-
-router.get('/:id/edit', productsController.edit);
+//Se reemplazo debajo por método editDB
+// router.get('/:id/edit', productsController.edit);
 
 //PUT edición de productos, ACTION
-
-router.put('/:id/', uploadFile.single('imagenProducto'),productsController.update);
+//Se reemplazó debajo por método updateDB
+// router.put('/:id/', uploadFile.single('imagenProducto'),productsController.update);
 
 // DELETE de productos, ACTION
-
-router.delete('/:id/',  productsController.destroy);
+//Se reemplazó por método idéntico pero por DB debajo
+// router.delete('/:id/',  productsController.destroy);
 
 // /products/cart caerá acá
 
@@ -53,26 +54,30 @@ router.get('/cart/',  productsController.cart );
 
 // /products/xxx caerá acá también.
 
-router.get('/:id/',  productsController.detail);
+//Se reemplazó por idéntico método debajo pero con DB
+// router.get('/:id/',  productsController.detail);
 
 // ------------ RUTAS PARA CRUD CON DB ------------- //
+//Index de productos en db
+router.get('/', productsController.indexDB);
+
 //Formulario de creación
-// router.get('/add', productsController.add); //OK
+router.get('/create/', productsController.add); //OK
 //Crea lo mostrado en el anterior
-// router.post('/', uploadFile.single('imagenProducto'), productsController.createDB); //OK
+router.post('/', uploadFile.single('imagenProducto'), productsController.createDB); //OK
 
 //Formulario de edición
-// router.get('/edit/:id', productsController.editDB); //OK
+router.get('/:id/edit', productsController.editDB); //OK
 //Edita lo mostrado en el anterior
-// router.put('/update/:id', productsController.updateDB);
+router.put('/:id/', uploadFile.single('imagenProducto'), productsController.updateDB); //OK
 
 //Formulario de borrado
-// router.get('/delete/:id', productsController.deleteDB);
+// router.get('/delete/:id', productsController.deleteDB); //No se implementó
 //Borra lo mostrado en el anterior
-// router.delete('/delete/:id', productsController.destroyDB);
+router.delete('/:id/', productsController.destroyDB); //ok
 
-//Buscador de productos
-// router.post('/buscar', productsController.buscar);
+//Detalle por producto
+router.get('/:id/', productsController.detailDB); //OK
 
 // ------------------------------------------------- //
 

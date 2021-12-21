@@ -3,7 +3,7 @@
    
     <%- include('../partials/head.ejs') %> 
 
-    <body>
+<body>
     
     <%- include('../partials/header.ejs') %>
 
@@ -11,19 +11,19 @@
          
     <h2>Estas editando:</h2>
     
-    <form action="/products/<%= productSent.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form action="/products/<%= productSent.ID %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <p><label for="descripcion">Descripcion:</label></p>
             <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" rows="3"><%= productSent.description %></textarea>
         </div>
         <p><label for="idProducto">ID:</label><br></p>
-        <input type="text" id="idProducto" name="idProducto" value="<%= productSent.id %>">
+        <input type="text" id="idProducto" name="idProducto" value="<%= productSent.ID %>" readonly>
         <p><label for="nombreProducto">Nombre:</label><br></p>
         <input type="text" id="nombreProducto" name="nombreProducto" value="<%= productSent.name %>">
         <p><label for="precioProducto">Precio:</label><br></p>
         <input type="text" id="precioProducto" name="precioProducto" value="<%= productSent.price %>"><br>
         <p><label for="categoriaProducto">Categoría:</label><br></p>
-        <p><input type="text" id="categoriaProducto" name="categoriaProducto" value="<%= productSent.category %>"><br></p>
+        <p><input type="text" id="idCategoriaProducto" name="idCategoriaProducto" value="<%= productSent.id_category %>"><br></p>
         <p><label for="imagenProducto">Imágen:</label><br></p>
         <input type="file" id="imagenProducto" name="imagenProducto">
         <p><input type="submit" value="Enviar"></p>
@@ -37,12 +37,7 @@
 
 
 
-</body>
 
 
-
-
-
-</html>
 </body>
 </html>
