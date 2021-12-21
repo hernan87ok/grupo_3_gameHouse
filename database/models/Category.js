@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
     }
 
 
-    const Cateogry = sequelize.define(alias, cols, config); 
+    const Category = sequelize.define(alias, cols, config); 
 
     return Category;
 };

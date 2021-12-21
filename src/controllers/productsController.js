@@ -13,7 +13,7 @@ como parámetro el precio final (en el archivo ejs): toThousand(finalPrice)*/
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 //Soporte DB - Sequelize
-const db = require('../database/models');
+const db = require('../../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 let Products = db.Product;
