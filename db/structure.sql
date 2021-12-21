@@ -24,6 +24,7 @@ CREATE TABLE `products` (
    `price` INT NOT NULL,
    `description` VARCHAR(255) NOT NULL,
    `console` VARCHAR(255) NOT NULL,
+   `image` VARCHAR(255),
    `id_category` INT,
    PRIMARY KEY (`ID`)
 );

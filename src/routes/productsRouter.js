@@ -23,11 +23,12 @@ router.get('/', productsController.index);
 
 // formulario crear productos
 
-router.get('/create/', productsController.create);
+//Se reemplazó por .add debajo
+// router.get('/create/', productsController.create);
 
 //POST de crear productos, ACTION
-
-router.post('/', uploadFile.single('imagenProducto'), productsController.store);
+//Se reemplazó debajo por método con DB
+// router.post('/', uploadFile.single('imagenProducto'), productsController.store);
 
 // formulario editar productos
 
@@ -53,6 +54,27 @@ router.get('/cart/',  productsController.cart );
 // /products/xxx caerá acá también.
 
 router.get('/:id/',  productsController.detail);
+
+// ------------ RUTAS PARA CRUD CON DB ------------- //
+//Formulario de creación
+// router.get('/add', productsController.add); //OK
+//Crea lo mostrado en el anterior
+// router.post('/', uploadFile.single('imagenProducto'), productsController.createDB); //OK
+
+//Formulario de edición
+// router.get('/edit/:id', productsController.editDB); //OK
+//Edita lo mostrado en el anterior
+// router.put('/update/:id', productsController.updateDB);
+
+//Formulario de borrado
+// router.get('/delete/:id', productsController.deleteDB);
+//Borra lo mostrado en el anterior
+// router.delete('/delete/:id', productsController.destroyDB);
+
+//Buscador de productos
+// router.post('/buscar', productsController.buscar);
+
+// ------------------------------------------------- //
 
 
 module.exports = router;

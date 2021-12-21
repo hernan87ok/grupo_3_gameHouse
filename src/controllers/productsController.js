@@ -12,6 +12,15 @@ una cantidad de decimales fija. Es una función, solamente deben poner
 como parámetro el precio final (en el archivo ejs): toThousand(finalPrice)*/
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+//Soporte DB - Sequelize
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+let Products = db.Product;
+let Categories = db.Category;
+// ----
+
+
 const productsController = {
 
 
@@ -111,6 +120,71 @@ const productsController = {
 
     res.redirect("/products")
   },
+
+  
+
+// ------ METODOS CRUD DB -------- //
+
+//MOSTRAR FORMULARIO PARA CREAR PRODUCTO 
+
+add: function (req, res) {
+  let allProductCategories = Categories.findAll();
+  
+  Promise
+  .all([allProductCategories])
+  .then(([allProductCategories]) => {
+      return res.render('./products/product-create', {allProductCategories})})
+  .catch(error => res.send(error))
+}, //fin add
+
+
+//CREAR NUEVO PRODUCTO
+createDB: (req, res) => {
+  const newProduct = {
+    //Creamos el producto que luego persistimos
+
+    name: req.body.nombre,
+    price: req.body.precio,
+    id_category: req.body.category,
+    description: req.body.descripcion,
+    console: req.body.console,
+    image: req.file ? req.file.filename : null
+   };
+
+//persistencia
+Products
+.create(newProduct)
+
+.then(()=> {
+  res.redirect("/products")})
+
+.catch (error => res.send(error))
+
+}, // Fin create
+
+//FORMULARIO DE EDICIÓN CON DB.
+editDB: (req, res) => {
+  let id = req.params.id;
+  let categories = Categories.findAll();
+  let productToEdit = Products.findByPk(id, {include: ['categories']});
+  Promise
+  .all([productToEdit, categories])
+  .then(([Product, allCategories]) => {
+    return res.render('./products/product-edit',
+    {
+      productSent : Product,
+      categories :  allCategories
+    });
+  })
+  .catch(error => res.send(error))
+},
+
+
+
+
+
+
+
 }
 
 module.exports = productsController;
