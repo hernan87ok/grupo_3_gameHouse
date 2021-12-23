@@ -243,6 +243,15 @@ detailDB:  (req, res) => {
       });
 },
 
+search: (req,res) => {
+Products.findAll ({
+  where: {name: {[Op.like]: `%${req.params.search}%`}},
+  include: ['category']
+})
+.then(productsSent => {
+  res.render ('./products/search' , {productsSent});
+});
+}
 
 
 }

@@ -79,6 +79,11 @@ router.delete('/:id/', productsController.destroyDB); //ok
 //Detalle por producto
 router.get('/:id/', productsController.detailDB); //OK
 
+//Buscar
+router.get('/search/:search/', productsController.search);
+
+
+
 // ------------------------------------------------- //
 
 
