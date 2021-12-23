@@ -9,11 +9,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
-        first_name: {
+        firstName: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        last_name: {
+        lastName: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        role_id: {
+        id_role: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
@@ -47,7 +47,7 @@ module.exports = (sequelize, dataTypes) => {
     User.associate = function (models) {
         User.belongsTo(models.Role, { // models.Role -> Role es el valor de alias en Role.js
             as: "role",
-            foreignKey: "role_id"
+            foreignKey: "id_role"
         })
     }
 
