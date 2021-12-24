@@ -19,8 +19,16 @@
             <input type="file" id="imagenProducto" name="imagenProducto">
             <p><label for="nombre" class="datos">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre"></p>
+
             <p><label for="consola" class="datos">Consola:</label><br>
-            <input type="text" id="consola" name="consola"><br></p>
+                <div class="form-group">
+                 <label for="select"></label>
+               <select class="form-control" id="formControl">
+                <% allProductCategories.forEach(categoria => { %>
+                <option>  <%= categoria.category  %> </option>
+                <% }) %> 
+                </select>
+                </div>
             <p><label for="precio" class="datos">Precio:</label><br>
                 <input type="text" id="precio" name="precio"><br></p>
             <p><label for="categoria" class="datos">Categoría:</label><br>
