@@ -248,8 +248,8 @@ Products.findAll ({
   where: {name: {[Op.like]: `%${req.params.search}%`}},
   include: ['category']
 })
-.then(productsSent => {
-  res.render ('./products/search' , {productsSent});
+.then(productSent => {
+  res.render ('./products/search' , {productSent});
 });
 }
 
