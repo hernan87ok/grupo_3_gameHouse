@@ -2,27 +2,14 @@ const bcryptjs = require('bcryptjs');
 
 const { validationResult } = require('express-validator');
 
-
-//JSON
-// const User = require('../models/User.js');
-
-
-//Soporte DB - Sequelize
-const db = require('../../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
-
-let Users = db.User;
-let Roles = db.Role;
-
-///
+const User = require('../models/User.js');
 
 const usersController = {
   register: (req,res) => {
     res.render('./users/register');
   },
 
-  processRegister: (req, res) => { //Ok con db
+  processRegister: (req, res) => {
       const resultValidation = validationResult(req);
               
       if (resultValidation.errors.length > 0) {
@@ -32,17 +19,9 @@ const usersController = {
         });
       }
 
-      //Busca en DB
-      // let userInDB = Users.('email', req.body.email);
-      let userInDB = Users.findAll ({
-        where: {email: {[Op.like]: `%${req.body.email}%`}}
-      })
-      Promise
-      .all([userInDB])
-      .then(([userInDB]) => {
-      
-        if (userInDB != '') {
-        // console.log(userInDB + '<-- user');
+      let userInDB = User.findByField('email', req.body.email);
+
+      if (userInDB) {
         return res.render('./users/register', {
           errors: {
             email: {
@@ -53,41 +32,25 @@ const usersController = {
         });
       }
 
-
       let userToCreate = {
         ...req.body,
-        id_role: 1,
         password: bcryptjs.hashSync(req.body.password, 10),
         avatar: req.file.filename
       }
-
-      let userCreated = Users.create(userToCreate)
-      .then(()=> {
-
-      return res.redirect('/users/login')})
-      .catch(error => res.send(error))
-     
-      });
-    },
-
-       
+  
+      let userCreated = User.create(userToCreate);
+  
+      return res.redirect('/users/login');
+  },
 
   login: (req, res) => {
     res.render('./users/login');
   },
 
-  loginProcess: (req, res) => { //Ok con db
-
-    // let userToLogin = User.findByField('email', req.body.email);
-    let userToLogin = Users.findOne ({
-      where: {email: {[Op.like]: `${req.body.email}`}}
-    })
-    Promise
-    .all([userToLogin])
-    .then(([userToLogin]) => {
+  loginProcess: (req, res) => {
+    let userToLogin = User.findByField('email', req.body.email);
     
-    if(userToLogin != '') {
-      // console.log(userToLogin + '<-- user');
+    if(userToLogin) {
       let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
       if (isOkThePassword) {
         delete userToLogin.password;
@@ -115,8 +78,6 @@ const usersController = {
         }
       }
     });
-  })
-  .catch (error => res.send(error))
   },
 
   profile: (req, res) => {

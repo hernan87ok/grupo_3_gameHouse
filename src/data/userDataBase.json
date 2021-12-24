@@ -42,5 +42,13 @@
   "email": "dabo-st@hotmail.com",
   "password": "$2a$10$zgzjFeC4P350CImtvMXzTOWorLK0CQad/hQArD.XieTGZN9UOCVXu",
   "avatar": "1638301481005_img.png"
+ },
+ {
+  "id": 6,
+  "firstName": "Hernan",
+  "lastName": "Cordary",
+  "email": "hernancordary@gmail.com",
+  "password": "$2a$10$XSp2oM1Lvr0yw5u5iXoM2elXhztNywEs/eQUqt50B1HWYaEJIXaWe",
+  "avatar": "1640300062740_img.png"
  }
 ]
