@@ -22,19 +22,20 @@
 
             <p><label for="consola" class="datos">Consola:</label><br>
                 <div class="form-group">
-                 <label for="select"></label>
-               <select class="form-control" id="formControl">
+                 <label for="formCategory"></label>
+               <select class="form-control" id="formCategory">
                 <% allProductCategories.forEach(categoria => { %>
                 <option>  <%= categoria.category  %> </option>
                 <% }) %> 
                 </select>
                 </div>
+
             <p><label for="precio" class="datos">Precio:</label><br>
                 <input type="text" id="precio" name="precio"><br></p>
             <p><label for="categoria" class="datos">Categoría:</label><br>
             <div class="form-group">
-                    <label for="select"></label>
-                    <select class="form-control" id="formControl">
+                    <label for="formRubro"></label>
+                    <select class="form-control" id="formRubro">
                       <option>Accion</option>
                       <option>RPG</option>
                       <option>Plataformas</option>
@@ -50,6 +51,7 @@
                 <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" rows="3"></textarea>
             </div>
             <p><input type="submit" value="Enviar"></p>
+        </form>
 </main>
 
 </body>

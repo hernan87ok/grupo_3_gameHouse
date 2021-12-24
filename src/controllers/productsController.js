@@ -162,9 +162,9 @@ createDB: (req, res) => {
 
     name: req.body.nombre,
     price: req.body.precio,
-    id_category: req.body.category,
-    description: req.body.descripcion,
-    console: req.body.console,
+    id_category: req.body.category, //viene como formCategory
+    description: req.body.descripcionProducto,
+    console: req.body.formRubro,
     image: req.file ? req.file.filename : null
    };
 
