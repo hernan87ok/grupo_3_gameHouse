@@ -162,9 +162,9 @@ createDB: (req, res) => {
 
     name: req.body.nombre,
     price: req.body.precio,
-    id_category: req.body.category, //viene como formCategory
+    id_category: req.body.category, //El ID de la categoria, no el nombre.
     description: req.body.descripcionProducto,
-    console: req.body.formRubro,
+    console: req.body.formRubro, // El campo Categoria del formulario (Accion, shooter, etc)
     image: req.file ? req.file.filename : null
    };
 
