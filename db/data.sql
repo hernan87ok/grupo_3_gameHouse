@@ -26,7 +26,7 @@ CREATE TABLE `categories` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `category` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,7 +57,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`ID`),
   KEY `FK_d8f32315-ef91-4670-95eb-5409d08a67c4` (`id_category`),
   CONSTRAINT `FK_d8f32315-ef91-4670-95eb-5409d08a67c4` FOREIGN KEY (`id_category`) REFERENCES `categories` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -81,7 +81,7 @@ CREATE TABLE `roles` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `role` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -111,7 +111,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`ID`),
   KEY `FK_509cc666-f834-4aca-a5ba-639fc46b6d81` (`id_role`),
   CONSTRAINT `FK_509cc666-f834-4aca-a5ba-639fc46b6d81` FOREIGN KEY (`id_role`) REFERENCES `roles` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
