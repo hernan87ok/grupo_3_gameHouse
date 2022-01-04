@@ -157,6 +157,8 @@ add: function (req, res) {
 
 //CREAR NUEVO PRODUCTO
 createDB: (req, res) => {
+
+  console.log(req.body.category);
   const newProduct = {
     //Creamos el producto que luego persistimos
 

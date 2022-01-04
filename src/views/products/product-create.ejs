@@ -23,9 +23,9 @@
             <p><label for="consola" class="datos">Consola:</label><br>
                 <div class="form-group">
                  <label for="formCategory"></label>
-               <select class="form-control" id="formCategory">
+               <select name="category" class="form-control" id="formCategory">
                 <% allProductCategories.forEach(categoria => { %>
-                <option>  <%= categoria.ID  %> </option>
+                <option value="<%= categoria.ID %>">  <%= categoria.ID  %> - <%= categoria.category %>  </option>
                 <% }) %> 
                 </select>
                 </div>
@@ -35,12 +35,12 @@
             <p><label for="categoria" class="datos">Categoría:</label><br>
             <div class="form-group">
                     <label for="formRubro"></label>
-                    <select class="form-control" id="formRubro">
+                    <select name="formRubro" class="form-control" id="formRubro">
                       <option>Accion</option>
                       <option>RPG</option>
                       <option>Plataformas</option>
                       <option>Rol</option>
-                      <option>Deportes</option>
+                      <option>Deportes</option>∫
                       <option>Shooter</option>
                       <option>Infantiles</option>
                       <option>Terror</option>
