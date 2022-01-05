@@ -246,14 +246,23 @@ detailDB:  (req, res) => {
 },
 
 search: (req,res) => {
-Products.findAll ({
-  where: {name: {[Op.like]: `%${req.params.search}%`}},
+let products = Products.findAll( {
+  where: {name: {[Op.like]: `${req.params.search}%`}},
   include: ['category']
 })
-.then(productSent => {
-  res.render ('./products/search' , {productSent});
-});
-}
+Promise
+.all([products])
+.then ( ([products]) => {
+ 
+    res.render('./products/search', {productsSent:products});
+})
+.catch(error => res.send(error))
+}, 
+
+
+
+
+
 
 
 }

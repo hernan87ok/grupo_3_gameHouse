@@ -5,75 +5,46 @@
 
     <body>
     
-    <%- include('../partials/header.ejs') %> 
+    <%- include('../partials/header.ejs') %>
 
-
-    <main>
-        <div class="portada">
-            <img src="/img/covers/<%= productSent.image %>" alt="product image" class="portada-b">
-        </div>
-
-        <div class="container">
-            <div class="DyC">
-                <h2>Descripción</h2>
-                <table class="standard-table">
-                    <tbody>
-                        <tr>
-                            <th>Descripción</th>
-                            <td><%= productSent.description %></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="DyC">
-                <h2>Características principales</h2>
-                <table class="standard-table">
-                    <tbody>
-                        <tr>
-                            <th>Nombre</th>
-                            <td><%= productSent.name %></td>
-                        </tr>
-                        <tr>
-                            <th>Precio</th>
-                            <td>$<%= productSent.price %></td>
-                        </tr>
-                        <tr>
-                            <th>Plataforma</th>
-                            <td><%= productSent.category.category %></td>
-
-
-                        </tr>
-                        <tr>
-                            <th>Genero</th>
-                            <td><%= productSent.console %></td>
-                        </tr>
-                        <tr>
-                            <th>Cuotas</th>
-                            <td>Hasta 12 cuotas sin interes</td>
-                        </tr>
-                    </tbody>
+<main>
+    <section name="Juegos destacados" class="section-destacados">
             
-                </table>
+    <h2 class="juegos-destacados">Resultado de la búsqueda</h2>
+    
+     <div class="box-articulos">
 
+        <% productsSent.forEach(producto => { %>
 
-
-
-
-                    <a href="/products/cart"><button class="carrito">
-                        <i class="fas fa-shopping-cart"></i>
-                    </button></a>
-                    <p><a href="/products/<%= productSent.ID %>/edit" class="action-button edit">EDITAR</a></p>
-					<p><form action="/products/<%= productSent.ID %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
-					</form></p>
-                   
+        <article>
+            <a href="/products/<%= producto.ID %>"><img src="/img/covers/<%= producto.image %>" alt="imagen del producto" class="responsive"></a>
+            
+            <div class= "div-detalles-articulo">
+               
+                <h3 class="precio">$<%= producto.price %></h3>
+                <p><%= producto.name %></p>
+                <p><%= producto.category.category %></p>
+                <h3 class="carrito"><i class="fas fa-cart-plus"></i></h3>
+          
             </div>
-        </div>
-    </main>
 
-    <%- include('../partials/footer.ejs') %> 
+        </article>
+        <% }) %> 
+    </div>
 
-</body>
+    </section>
+
+    <button class="btn"><i class="far fa-plus-square"><a href="/products/create"></i>  Agregar Juego</button></a>
+
+</main>
+
+
+
+<%- include('../partials/footer.ejs') %> 
+
+
+    </body>
+
 
 
 </html>
