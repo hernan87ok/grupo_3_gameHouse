@@ -158,7 +158,37 @@ add: function (req, res) {
 //CREAR NUEVO PRODUCTO
 createDB: (req, res) => {
 
-  console.log(req.body.category);
+  // console.log(req.body.category);
+
+
+      //Validación producto 5 letras  (Sprint 7)
+      //Si no cumple retorna al home productos
+      if(req.body.nombre.length < 5) {
+        return res.redirect('/products/')
+      }
+      // Fin validación producto 5 letras  
+
+      //Validación descripción 20 letras  (Sprint 7)
+      //Si no cumple retorna al home productos
+      if(req.body.descripcionProducto.length < 20) {
+        return res.redirect('/products/')
+      }
+      // Fin validación producto 5 letras 
+
+    //Validacion extensión de imágen
+
+    let admitted= ['.jpg','.jpeg','.png','.gif'];
+    if( req.file && (! (admitted.includes( req.file.filename.match(/\.[0-9a-z]+$/i)[0]) )  ) ) {
+      
+      
+      return res.redirect('/products/')
+    
+    }
+    //Fin validación de extensión imágen (Sprint 7)
+
+
+
+
   const newProduct = {
     //Creamos el producto que luego persistimos
 

@@ -32,17 +32,16 @@ const usersController = {
         });
       }
 
-      //Busca en DB
-      // let userInDB = Users.('email', req.body.email);
-      let userInDB = Users.findAll ({
-        where: {email: {[Op.like]: `%${req.body.email}%`}}
+      //Busca en DB y valida que no sea existente (Sprint 7)
+      let userInDB = Users.findOne ({
+        where: {email: {[Op.eq]: `${req.body.email}`}}
       })
       Promise
       .all([userInDB])
       .then(([userInDB]) => {
-      
-        if (userInDB != '') {
-        // console.log(userInDB + '<-- user');
+        // console.log(userInDB.email + '<-- user fuera del if');
+        if (  userInDB != null ) {
+        // console.log(userInDB.email + '<-- user en if');
         return res.render('./users/register', {
           errors: {
             email: {
@@ -53,6 +52,33 @@ const usersController = {
         });
       }
 
+    //Validacion pass ocho caracteres por lo menos 
+    if(req.body.password.length < 8) {
+      return res.render('./users/register', {
+        errors: {
+          password: {
+            msg: 'Debe ingresar una contraseña de por lo menos ocho caracteres'
+          }
+        },
+        oldData: req.body
+      });
+    }
+    //Fin validación pass 8 caracteres (Sprint 7)
+
+    //Validacion extensión de avatar
+    let admitted= ['.jpg','.jpeg','.png','.gif'];
+    // console.log(req.file.filename.match(/\.[0-9a-z]+$/i)[0]);
+    if( ! (admitted.includes( req.file.filename.match(/\.[0-9a-z]+$/i)[0]) )   ) {
+      return res.render('./users/register', {
+        errors: {
+          avatar: {
+            msg: 'Solo se admiten imágenes de tipo .jpg, .jpeg, .png, .gif'
+          }
+        },
+        oldData: req.body
+      });
+    }
+    //Fin validación de extensión avatar (Sprint 7)
 
       let userToCreate = {
         ...req.body,
@@ -60,6 +86,59 @@ const usersController = {
         password: bcryptjs.hashSync(req.body.password, 10),
         avatar: req.file.filename
       }
+
+      //Validamos tamaño de nombre y apellido (Sprint 7)
+      if(userToCreate.firstName.length < 2) {
+      return res.render('./users/register', {
+        errors: {
+          firstName: {
+            msg: 'El nombre debe tener por lo menos dos caracteres'
+          }
+        },
+        oldData: req.body
+      });
+    }
+    if(userToCreate.lastName.length < 2) {
+      return res.render('./users/register', {
+        errors: {
+          lastName: {
+            msg: 'El apellido debe tener por lo menos dos caracteres'
+          }
+        },
+        oldData: req.body
+      });
+    }
+    // Fin validacion tamaño de nombre y apellido (Sprint 7)
+
+    let regex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+
+    //Validacion email Ok (Sprint 7)
+    if(!regex.test(userToCreate.email)) {
+      return res.render('./users/register', {
+        errors: {
+          email: {
+            msg: 'El formato del correo no es válido'
+          }
+        },
+        oldData: req.body
+      });
+    }
+    //Fin validación email (Sprint 7)
+
+    //Validacion clave obligatoria
+    if(userToCreate.password.length == 0) {
+      return res.render('./users/register', {
+        errors: {
+          password: {
+            msg: 'Debe ingresar una contraseña'
+          }
+        },
+        oldData: req.body
+      });
+    }
+    //Fin validación clave obligatoria (Sprint 7)}
+
+  
 
       let userCreated = Users.create(userToCreate)
       .then(()=> {
@@ -78,15 +157,53 @@ const usersController = {
 
   loginProcess: (req, res) => { //Ok con db
 
+    //Validación email vacío (Sprint 7)
+    let regex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+    if(req.body.email== '') {
+    return res.render('./users/login', {
+      errors: {
+        email: {
+          msg: 'Debe ingresar un email para poder loguearse'
+        }
+      }
+    });
+  }
+   // Fin validación email vacío 
+
+    //Validación password vacío (Sprint 7)
+    if(req.body.password == '') {
+    return res.render('./users/login', {
+      errors: {
+        password: {
+          msg: 'Debe ingresar una contraseña para poder loguearse'
+        }
+      }
+    });
+  }
+  // Fin validación password vacío 
+
+    //Validacion email válido (Sprint 7)
+    if(!regex.test(req.body.email)) {
+      return res.render('./users/login', {
+        errors: {
+          email: {
+            msg: 'El formato del correo no es válido'
+          }
+        }
+      });
+    }
+    //Fin validación email (Sprint 7)
+
+
     // let userToLogin = User.findByField('email', req.body.email);
     let userToLogin = Users.findOne ({
-      where: {email: {[Op.like]: `${req.body.email}`}}
+      where: {email: {[Op.eq]: `${req.body.email}`}}
     })
     Promise
     .all([userToLogin])
     .then(([userToLogin]) => {
     
-    if(userToLogin != '') {
+    if(userToLogin != null ) {
       // console.log(userToLogin + '<-- user');
       let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
       if (isOkThePassword) {
@@ -106,7 +223,7 @@ const usersController = {
           }
         }
       });
-    }
+    } else {
 
     return res.render('./users/login', {
       errors: {
@@ -115,7 +232,7 @@ const usersController = {
         }
       }
     });
-  })
+  }}) 
   .catch (error => res.send(error))
   },
 
