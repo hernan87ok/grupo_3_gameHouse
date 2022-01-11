@@ -7,29 +7,27 @@ window.addEventListener('load', function() {
 
         let errors = [];
 
-        //let imagen = document.querySelector('#imagenProducto');
-        //if(imagen.value == ''){
-        //    errors.push('')
-        //}
+        //let admitted= ['.jpg','.jpeg','.png','.gif'];
+        //FALTA VALIDACION IMAGENES
+
+        
         let nombre = document.querySelector('input#nombre');
             if(nombre.value == ''){
-                errors.push('Campo obligatorio');
+                errors.push('Nombre obligatorio');
             } else if (nombre.value.length < 5) {
-                errors.push('Debe tener al menos 5 caracteres');
+                errors.push('El nombre debe tener al menos 5 caracteres');
             }
 
         let precio = document.querySelector('input#precio');
             if(precio.value == ''){
-                errors.push('Campo obligatorio');
+                errors.push('Precio obligatorio');
             }
-
-            e.preventDefault();
 
         let descripcion = document.querySelector('#descripcionProducto');
             if(descripcion.value == ''){
-                errors.push('Campo obligatorio');
+                errors.push('Descripción obligatoria');
             } else if (descripcion.value.length < 20) {               
-                errors.push('Debés tener al menos 20 caracteres')
+                errors.push('Su descripción debe tener al menos 20 caracteres')
                 }
 
             if (errors.length > 0) {
