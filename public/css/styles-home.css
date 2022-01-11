@@ -398,6 +398,10 @@ box-sizing: border-box;
 
 }
 
+.errors {
+    color: red;
+}
+
 /*TABLETS*/
 
 @media (min-width: 361px) {

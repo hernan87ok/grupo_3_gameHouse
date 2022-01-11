@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS gamerhouse;
-USE gamerhouse;
+CREATE DATABASE IF NOT EXISTS 'gamerhouse';
+USE 'gamerhouse';
 
 CREATE TABLE `users` (
    `ID` INT NOT NULL AUTO_INCREMENT,
