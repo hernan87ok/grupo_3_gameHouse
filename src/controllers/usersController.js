@@ -8,7 +8,7 @@ const { validationResult } = require('express-validator');
 
 
 //Soporte DB - Sequelize
-const db = require('../../database/models');
+const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
