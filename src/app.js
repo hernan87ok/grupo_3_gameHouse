@@ -39,6 +39,16 @@ const productsRouter = require('./routes/productsRouter');
 const usersRouter = require ('./routes/usersRouter');
 
 
+
+//Aquí llamo a la ruta de las api de users
+const apiUsersRouter = require('./routes/api/users');
+//Aquí llamo a la ruta de las api de products
+const apiProductsRouter = require('./routes/api/products');
+
+//Aquí creo la colección de mis recursos  (APIs)
+app.use('/api/users', apiUsersRouter);
+app.use('/api/products',apiProductsRouter);
+
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
