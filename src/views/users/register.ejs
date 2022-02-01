@@ -67,7 +67,7 @@
 
                     <h4 class="datos2">Imagen de perfil</h4>
                         <div class=div-input>
-                            <input type="file" name="avatar">
+                            <input type="file" name="avatar" id="avatar">
                             <% if (locals.errors && errors.avatar) { %>
                                 <div class="text-danger">
                                     <%= errors.avatar.msg %>
@@ -92,11 +92,18 @@
             
                 </form>
         </div>
+
+        <div class="errors">
+            <ul>
+            </ul>
+        </div>
+        
     </main>
 
+    <script src="/js/registerValidation.js"></script>
+
+    
     <%- include('../partials/footer.ejs') %> 
-
-</body>
-
+</body> 
 
 </html>

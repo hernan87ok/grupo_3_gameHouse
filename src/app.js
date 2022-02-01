@@ -4,6 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+var cors = require('cors');
 
 // Express
 const app = express();
@@ -31,6 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); 
 app.use(express.static('./public'));
 app.use(methodOverride('_method'));
+app.use(cors());
 
 // Route System require and use
 

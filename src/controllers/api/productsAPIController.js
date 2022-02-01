@@ -80,41 +80,48 @@ const productsAPIController = {
         Products.findByPk(req.params.id, {
             include: [{association : 'category'}]
         })
-            .then(product => {
-                let respuesta;
-                if(product != null ) {
-                let category = [];
-                category.push(product.category.category);
-                let encontrado = {
-                    id : product.ID,
-                    name : product.name,
-                    price : product.price,
-                    description : product.description,
-                    rubro : product.console,
-                    url : '/img/covers/' + product.image
-                }
-                respuesta = {
-                    meta: {
-                        status: 200,
-                        total: 1,
-                        url: '/api/products/:id'
-                    },
-                    data: encontrado
-                }
+        .then(function(product){detail(product, res)})  
+    },
 
-            } else {
-                 respuesta = {
-                    meta: {
-                        status: 204,
-                        total : 0,
-                        url: '/api/products/:id'
-                    },
-                    data: null
-                }
-            }
-                res.json(respuesta);
-            });
+    'latest': (req,res) =>{
+        Products.findOne({order: [['createdAt', 'DESC']]})
+        .then(function(product){detail(product, res)})
     }
 }
+function detail(product, res){
+            let respuesta;
+            if(product != null ) {
+            let category = [];
+            category.push(product.category);
+            let encontrado = {
+                id : product.ID,
+                name : product.name,
+                price : product.price,
+                description : product.description,
+                rubro : product.console,
+                url : '/img/covers/' + product.image
+            }
+            respuesta = {
+                meta: {
+                    status: 200,
+                    total: 1,
+                    url: '/api/products/:id'
+                },
+                data: encontrado
+            }
+
+        } else {
+             respuesta = {
+                meta: {
+                    status: 204,
+                    total : 0,
+                    url: '/api/products/:id'
+                },
+                data: null
+            }
+        }
+            res.json(respuesta);
+    }
+    
 
 module.exports = productsAPIController;

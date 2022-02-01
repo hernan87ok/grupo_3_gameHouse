@@ -8,12 +8,13 @@
     <%- include('../partials/header.ejs') %>
 
     <main class="fixed">
-         
+
+            
         <div class="containerreg">
         
             <h2 class="formulario">Cargar Nuevo Producto</h2>
         
-        <form action="/products" method="POST" enctype="multipart/form-data">
+        <form class="form-product-create" action="/products" method="POST" enctype="multipart/form-data">
     
             <p><label for="imagenProducto" class="datos">Imágen:</label><br></p>
             <input type="file" id="imagenProducto" name="imagenProducto">
@@ -46,12 +47,18 @@
                     </select>
             </div>
             <div class="form-group">
-                <p><label for="descripcion" class="datos">Descripcion:</label></p>
+                <p><label for="descripcion" class="datos" name="descripcionProducto" >Descripcion:</label></p>
                 <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" rows="3"></textarea>
             </div>
             <p><input type="submit" value="Enviar"></p>
         </form>
-</main>
+        <div class="errors">
+            <ul>
+            </ul>
+        </div>
+    </main>
+
+    <script src="/js/productValidation.js"></script>
 
 </body>
 <%- include('../partials/footer.ejs') %> 
