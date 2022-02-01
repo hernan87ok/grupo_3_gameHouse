@@ -84,7 +84,10 @@ const productsAPIController = {
     },
 
     'latest': (req,res) =>{
-        Products.findOne({order: [['createdAt', 'DESC']]})
+        Products.findOne({order: [['createdAt', 'DESC']],
+        include: [{association: 'category'}]
+    
+    })
         .then(function(product){detail(product, res)})
     }
 }
@@ -99,6 +102,7 @@ function detail(product, res){
                 price : product.price,
                 description : product.description,
                 rubro : product.console,
+                category: product.category.category,
                 url : '/img/covers/' + product.image
             }
             respuesta = {
