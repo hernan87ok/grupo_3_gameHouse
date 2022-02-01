@@ -12,6 +12,9 @@ const Categories = db.Category;
 
 const productsAPIController = {
     'list': (req, res) => {
+        Categories.findAll().then(allCategories => {
+
+        
         Products.findAll(
             {
                 include: [{association : "category"}]
@@ -57,6 +60,7 @@ const productsAPIController = {
                 juegosSwitch: cantCat3,
                 juegosXbox: cantCat4
             },
+            catCount : allCategories.length,
             products : productos
             }
             
@@ -69,7 +73,7 @@ const productsAPIController = {
                 data: rta
             } 
                 res.json(respuesta);
-            })
+            })})
     },
     
     'detail': (req, res) => {
