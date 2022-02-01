@@ -26,6 +26,8 @@ CREATE TABLE `products` (
    `console` VARCHAR(255) NOT NULL,
    `image` VARCHAR(255),
    `id_category` INT,
+   'createdAt' DATETIME,
+   'updatedAt' DATETIME,
    PRIMARY KEY (`ID`)
 );
 
