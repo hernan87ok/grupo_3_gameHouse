@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
             for(let i = 0 ; i < errors.length; i++) {
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
             } 
-        } else {alert('Completaste todos los campos correctamente')}
+        } else {} //alert('Completaste todos los campos correctamente')}
     
     })
 })
