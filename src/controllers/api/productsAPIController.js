@@ -55,10 +55,10 @@ const productsAPIController = {
             let rta = {
             count : productos.length,
             countByCategory : {
-                juegosPs4: cantCat2,
-                juegosPs5: cantCat1,
-                juegosSwitch: cantCat3,
-                juegosXbox: cantCat4
+                PS4: cantCat2,
+                PS5: cantCat1,
+                Switch: cantCat3,
+                XBOX: cantCat4
             },
             catCount : allCategories.length,
             products : productos
