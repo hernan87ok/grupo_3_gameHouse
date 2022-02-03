@@ -80,7 +80,7 @@ router.delete('/:id/', productsController.destroyDB); //ok
 router.get('/:id/', productsController.detailDB); //OK
 
 //Buscar
-router.get('/search/:search/', productsController.search);
+router.post('/', productsController.indexDB);
 
 
 

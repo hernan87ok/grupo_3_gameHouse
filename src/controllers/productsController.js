@@ -128,7 +128,11 @@ const productsController = {
 
 
 indexDB: (req, res) => {
-  let products = Products.findAll( {include: ['category']});
+  const options = {include: ['category']}
+  if (req.query.search) {
+    options.where = {name: {[Op.like]: `${req.query.search}%`}}
+  }
+  let products = Products.findAll(options, );
   Promise
   .all([products])
   .then ( ([products]) => {
@@ -274,27 +278,6 @@ detailDB:  (req, res) => {
           res.render('./products/detail', {productSent});
       });
 },
-
-search: (req,res) => {
-let products = Products.findAll( {
-  where: {name: {[Op.like]: `${req.params.search}%`}},
-  include: ['category']
-})
-Promise
-.all([products])
-.then ( ([products]) => {
- 
-    res.render('./products/search', {productsSent:products});
-})
-.catch(error => res.send(error))
-}, 
-
-
-
-
-
-
-
 }
 
 module.exports = productsController;

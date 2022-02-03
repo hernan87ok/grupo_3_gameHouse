@@ -5,6 +5,8 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 var cors = require('cors');
+const bodyParser = require('body-parser');
+
 
 // Express
 const app = express();
@@ -16,6 +18,8 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false,
 }));
+
+app.use(bodyParser.urlencoded());
 
 app.use(cookies());
 
@@ -60,3 +64,12 @@ app.use('/users', usersRouter);
 // Server Listen
 
 app.listen(3500, () => { console.log('Servidor corriendo en http://localhost:3500');})
+
+
+//
+
+// function buscadorInterno() {
+//	filter = inputSearch.value.toUpperCase();
+//
+//
+//}
