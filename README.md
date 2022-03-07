@@ -45,7 +45,18 @@ https://trello.com/b/QzbMQqLF/gamehouse
 
 ## Project Screens
 
----
+### Home Screen
+![PS1](https://user-images.githubusercontent.com/89488172/157124418-a1884da4-2773-4be5-96dc-adee0f915a37.PNG)
+
+### Game List, Admin View
+![PS2AdminView2](https://user-images.githubusercontent.com/89488172/157124423-96ee8848-b5b5-4ed1-890d-7f650da6161f.PNG)
+
+### Register
+![PS3](https://user-images.githubusercontent.com/89488172/157124426-700b7d22-dc05-400e-a4b4-0304fd7267ee.PNG)
+
+### Login
+![PS4](https://user-images.githubusercontent.com/89488172/157124427-8d1dff4a-8c21-4c87-8b1f-920bb13cebb0.PNG)
+
 
 
 ## Dashboard
