@@ -17,15 +17,18 @@ It's a gaming e-commerce destined to a young audience. We made this site with tw
 * Build a JavaScript App from scratch
 * Afirm and conect all the learned concepts in the Carreer
 * Learn and practice GIT workflow / team work
-* 
+
 
 ## Stack of Technologies
 
-Front End: HTML, CSS, JavaScript, React
+# Front End: 
+HTML, CSS, JavaScript, React
 
-Back End: Node.js, Express, Sequelize
+# Back End: 
+Node.js, Express, Sequelize
 
-Database: MySQL
+# Database: 
+MySQL
 
 
 ## Team members
@@ -40,7 +43,7 @@ Database: MySQL
 https://trello.com/b/QzbMQqLF/gamehouse 
 
 
-## WebPage Working
+## Project Screens
 
 ---
 
@@ -50,7 +53,7 @@ https://trello.com/b/QzbMQqLF/gamehouse
 https://github.com/andresarield/gh-dashboard 
 
 
-## Estructura
+## Structure
 
 ![Gamerhouse__dynobird com__2021-12-16 18_23_54](https://user-images.githubusercontent.com/89488172/146451029-29c7304e-6c0a-4eb0-b9ab-da36f3dc6a5f.png)
 
