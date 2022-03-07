@@ -9,7 +9,7 @@ This is a student group project done as a first big assigment, in wich join all 
 
 ## About the project
 
-It's a gaming e-commerce destined to a young audience. We made this site with two ideas in mind: A good looking, minimalist site and focused on being user friendly.
+It's a gaming e-commerce destined to a young audience. We've made this site with two big ideas in mind: A good looking, minimalist site focused on being user friendly.
 
 
 ## Project Objetives
